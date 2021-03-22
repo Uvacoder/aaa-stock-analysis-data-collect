@@ -1,0 +1,229 @@
+features,threshold,pvalue,fvalue,root_mean_squared_error,mean_absolute_error,mean_squared_error,confidence,accuracy,precision,recall,f1_score,f-value,confusion matrix
+['Net Profit GR'],0.010000,0.050000,6.230825,0.484123,0.234375,0.234375,0.765625,0.765625,0.000000,0.000000,0.000000,58.721393,"[[637   0]
+ [195   0]]"
+"['Spread High-Low GR', 'Expenditure GR', 'Net Profit GR']",0.010000,0.100000,6.230825,0.484123,0.234375,0.234375,0.765625,0.765625,0.000000,0.000000,0.000000,24.892535,"[[637   0]
+ [195   0]]"
+"['Spread High-Low GR', 'Expenditure GR', 'Net Profit GR']",0.010000,0.150000,6.230825,0.484123,0.234375,0.234375,0.765625,0.765625,0.000000,0.000000,0.000000,24.892535,"[[637   0]
+ [195   0]]"
+"['No. of Trades GR', 'Spread High-Low GR', 'Expenditure GR', 'Net Profit GR']",0.010000,0.200000,6.230825,0.484123,0.234375,0.234375,0.765625,0.765625,0.000000,0.000000,0.000000,20.416265,"[[637   0]
+ [195   0]]"
+"['No. of Trades GR', 'Deliverable Quantity GR', 'Spread High-Low GR', 'Expenditure GR', 'Net Profit GR']",0.010000,0.250000,6.230825,0.484123,0.234375,0.234375,0.765625,0.765625,0.000000,0.000000,0.000000,16.902308,"[[637   0]
+ [195   0]]"
+"['No. of Trades GR', 'Deliverable Quantity GR', '% Deli. Qty to Traded Qty GR', 'Spread High-Low GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Expenditure GR', 'Net Profit GR']",0.010000,0.653139,0.100000,0.484123,0.234375,0.234375,0.765625,0.765625,0.000000,0.000000,0.000000,19.473505,"[[637   0]
+ [195   0]]"
+"['No. of Trades GR', 'Deliverable Quantity GR', '% Deli. Qty to Traded Qty GR', 'Spread High-Low GR', 'Revenue GR', 'Dividend Value GR', 'Expenditure GR', 'Net Profit GR']",0.010000,0.374304,0.500000,0.484123,0.234375,0.234375,0.765625,0.765625,0.000000,0.000000,0.000000,24.356971,"[[637   0]
+ [195   0]]"
+"['No. of Trades GR', 'Deliverable Quantity GR', '% Deli. Qty to Traded Qty GR', 'Spread High-Low GR', 'Expenditure GR', 'Net Profit GR']",0.010000,0.292366,1.000000,0.484123,0.234375,0.234375,0.765625,0.765625,0.000000,0.000000,0.000000,14.821428,"[[637   0]
+ [195   0]]"
+"['Spread High-Low GR', 'Expenditure GR', 'Net Profit GR']",0.010000,0.065994,2.000000,0.484123,0.234375,0.234375,0.765625,0.765625,0.000000,0.000000,0.000000,24.892535,"[[637   0]
+ [195   0]]"
+['Net Profit GR'],0.010000,0.012612,5.000000,0.484123,0.234375,0.234375,0.765625,0.765625,0.000000,0.000000,0.000000,58.721393,"[[637   0]
+ [195   0]]"
+[],0.010000,,10.000000,,,,,,,,,,
+[],0.010000,,100.000000,,,,,,,,,,
+[],0.020000,0.050000,,,,,,,,,,,
+"['No. of Trades GR', 'Dividend Value GR', 'Expenditure GR']",0.020000,0.100000,3.842688,0.336126,0.112981,0.112981,0.887019,0.887019,0.000000,0.000000,0.000000,10.935515,"[[738   0]
+ [ 94   0]]"
+"['Close Price GR', 'No. of Trades GR', 'Spread High-Low GR', 'Dividend Value GR', 'Expenditure GR']",0.020000,0.150000,3.842688,0.336126,0.112981,0.112981,0.887019,0.887019,0.000000,0.000000,0.000000,7.003183,"[[738   0]
+ [ 94   0]]"
+"['Close Price GR', 'WAP GR', 'No. of Trades GR', 'Spread High-Low GR', 'Dividend Value GR', 'Expenditure GR']",0.020000,0.200000,3.842688,0.336126,0.112981,0.112981,0.887019,0.887019,0.000000,0.000000,0.000000,5.855404,"[[738   0]
+ [ 94   0]]"
+"['Low Price GR', 'Close Price GR', 'WAP GR', 'No. of Trades GR', 'Spread High-Low GR', 'Dividend Value GR', 'Expenditure GR']",0.020000,0.250000,3.842688,0.336126,0.112981,0.112981,0.887019,0.887019,0.000000,0.000000,0.000000,5.257691,"[[738   0]
+ [ 94   0]]"
+"['High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Expenditure GR', 'Net Profit GR']",0.020000,0.675635,0.100000,0.336126,0.112981,0.112981,0.887019,0.887019,0.000000,0.000000,0.000000,4.539327,"[[738   0]
+ [ 94   0]]"
+"['High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No. of Trades GR', 'Deliverable Quantity GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Expenditure GR', 'Net Profit GR']",0.020000,0.468149,0.500000,0.336126,0.112981,0.112981,0.887019,0.887019,0.000000,0.000000,0.000000,5.037825,"[[738   0]
+ [ 94   0]]"
+"['Low Price GR', 'Close Price GR', 'WAP GR', 'No. of Trades GR', 'Spread High-Low GR', 'Dividend Value GR', 'Expenditure GR']",0.020000,0.210504,1.000000,0.336126,0.112981,0.112981,0.887019,0.887019,0.000000,0.000000,0.000000,5.257691,"[[738   0]
+ [ 94   0]]"
+"['Close Price GR', 'No. of Trades GR', 'Spread High-Low GR', 'Dividend Value GR', 'Expenditure GR']",0.020000,0.141499,2.000000,0.336126,0.112981,0.112981,0.887019,0.887019,0.000000,0.000000,0.000000,7.003183,"[[738   0]
+ [ 94   0]]"
+[],0.020000,,5.000000,,,,,,,,,,
+[],0.020000,,10.000000,,,,,,,,,,
+[],0.020000,,100.000000,,,,,,,,,,
+"['Low Price GR', 'No. of Trades GR']",0.030000,0.050000,14.257174,0.229967,0.052885,0.052885,0.947115,0.947115,0.000000,0.000000,0.000000,14.662391,"[[788   0]
+ [ 44   0]]"
+"['Low Price GR', 'Close Price GR', 'WAP GR', 'No. of Trades GR', 'Revenue GR']",0.030000,0.100000,14.257174,0.229967,0.052885,0.052885,0.947115,0.947115,0.000000,0.000000,0.000000,7.521925,"[[788   0]
+ [ 44   0]]"
+"['Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Revenue GR', 'Dividend Value GR', 'Expenditure GR']",0.030000,0.150000,14.257174,0.229967,0.052885,0.052885,0.947115,0.947115,0.000000,0.000000,0.000000,5.112451,"[[788   0]
+ [ 44   0]]"
+"['Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']",0.030000,0.200000,14.257174,0.229967,0.052885,0.052885,0.947115,0.947115,0.000000,0.000000,0.000000,4.542089,"[[788   0]
+ [ 44   0]]"
+"['Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']",0.030000,0.250000,14.257174,0.229967,0.052885,0.052885,0.947115,0.947115,0.000000,0.000000,0.000000,4.486378,"[[788   0]
+ [ 44   0]]"
+"['High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']",0.030000,0.373345,0.100000,0.229967,0.052885,0.052885,0.947115,0.947115,0.000000,0.000000,0.000000,3.433313,"[[788   0]
+ [ 44   0]]"
+"['High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']",0.030000,0.373345,0.500000,0.229967,0.052885,0.052885,0.947115,0.947115,0.000000,0.000000,0.000000,3.433313,"[[788   0]
+ [ 44   0]]"
+"['High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']",0.030000,0.309616,1.000000,0.229967,0.052885,0.052885,0.947115,0.947115,0.000000,0.000000,0.000000,3.684697,"[[788   0]
+ [ 44   0]]"
+"['Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Revenue GR', 'Dividend Value GR', 'Expenditure GR']",0.030000,0.149731,2.000000,0.229967,0.052885,0.052885,0.947115,0.947115,0.000000,0.000000,0.000000,5.112451,"[[788   0]
+ [ 44   0]]"
+['No. of Trades GR'],0.030000,0.000163,5.000000,0.229967,0.052885,0.052885,0.947115,0.947115,0.000000,0.000000,0.000000,25.897553,"[[788   0]
+ [ 44   0]]"
+['No. of Trades GR'],0.030000,0.000163,10.000000,0.229967,0.052885,0.052885,0.947115,0.947115,0.000000,0.000000,0.000000,25.897553,"[[788   0]
+ [ 44   0]]"
+[],0.030000,,100.000000,,,,,,,,,,
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR']",0.040000,0.050000,31.460582,0.155043,0.024038,0.024038,0.975962,0.975962,0.000000,0.000000,0.000000,16.674037,"[[812   0]
+ [ 20   0]]"
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Revenue GR']",0.040000,0.100000,31.460582,0.155043,0.024038,0.024038,0.975962,0.975962,0.000000,0.000000,0.000000,11.482392,"[[812   0]
+ [ 20   0]]"
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Revenue GR']",0.040000,0.150000,31.460582,0.155043,0.024038,0.024038,0.975962,0.975962,0.000000,0.000000,0.000000,11.482392,"[[812   0]
+ [ 20   0]]"
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Revenue GR']",0.040000,0.200000,31.460582,0.155043,0.024038,0.024038,0.975962,0.975962,0.000000,0.000000,0.000000,11.482392,"[[812   0]
+ [ 20   0]]"
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Income GR']",0.040000,0.250000,31.460582,0.155043,0.024038,0.024038,0.975962,0.975962,0.000000,0.000000,0.000000,8.304701,"[[812   0]
+ [ 20   0]]"
+"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'Net Profit GR']",0.040000,0.681980,0.100000,0.155043,0.024038,0.024038,0.975962,0.975962,0.000000,0.000000,0.000000,5.643995,"[[812   0]
+ [ 20   0]]"
+"['Open Price GR', 'High Price GR', 'Low Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Net Profit GR']",0.040000,0.457893,0.500000,0.155043,0.024038,0.024038,0.975962,0.975962,0.000000,0.000000,0.000000,6.033146,"[[812   0]
+ [ 20   0]]"
+"['Low Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Income GR', 'Net Profit GR']",0.040000,0.312780,1.000000,0.155043,0.024038,0.024038,0.975962,0.975962,0.000000,0.000000,0.000000,6.695231,"[[812   0]
+ [ 20   0]]"
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Revenue GR']",0.040000,0.092799,2.000000,0.155043,0.024038,0.024038,0.975962,0.975962,0.000000,0.000000,0.000000,11.482392,"[[812   0]
+ [ 20   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR']",0.040000,0.001763,5.000000,0.155043,0.024038,0.024038,0.975962,0.975962,0.000000,0.000000,0.000000,16.674037,"[[812   0]
+ [ 20   0]]"
+"['No.of Shares GR', 'No. of Trades GR']",0.040000,0.000579,10.000000,0.155043,0.024038,0.024038,0.975962,0.975962,0.000000,0.000000,0.000000,23.624118,"[[812   0]
+ [ 20   0]]"
+[],0.040000,,100.000000,,,,,,,,,,
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Revenue GR']",0.050000,0.050000,59.134055,0.125000,0.015625,0.015625,0.984375,0.984375,0.000000,0.000000,0.000000,21.524242,"[[819   0]
+ [ 13   0]]"
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR']",0.050000,0.100000,59.134055,0.125000,0.015625,0.015625,0.984375,0.984375,0.000000,0.000000,0.000000,15.657197,"[[819   0]
+ [ 13   0]]"
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR']",0.050000,0.150000,59.134055,0.125000,0.015625,0.015625,0.984375,0.984375,0.000000,0.000000,0.000000,15.657197,"[[819   0]
+ [ 13   0]]"
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR']",0.050000,0.200000,59.134055,0.125000,0.015625,0.015625,0.984375,0.984375,0.000000,0.000000,0.000000,13.528928,"[[819   0]
+ [ 13   0]]"
+"['Low Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR']",0.050000,0.250000,59.134055,0.125000,0.015625,0.015625,0.984375,0.984375,0.000000,0.000000,0.000000,12.356027,"[[819   0]
+ [ 13   0]]"
+"['High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Alpha GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'Net Profit GR']",0.050000,0.688304,0.100000,0.125000,0.015625,0.015625,0.984375,0.984375,0.000000,0.000000,0.000000,7.473425,"[[819   0]
+ [ 13   0]]"
+"['Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'Net Profit GR']",0.050000,0.420217,0.500000,0.125000,0.015625,0.015625,0.984375,0.984375,0.000000,0.000000,0.000000,7.947645,"[[819   0]
+ [ 13   0]]"
+"['Low Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Net Profit GR']",0.050000,0.315937,1.000000,0.125000,0.015625,0.015625,0.984375,0.984375,0.000000,0.000000,0.000000,10.989444,"[[819   0]
+ [ 13   0]]"
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR']",0.050000,0.153413,2.000000,0.125000,0.015625,0.015625,0.984375,0.984375,0.000000,0.000000,0.000000,13.528928,"[[819   0]
+ [ 13   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Revenue GR']",0.050000,0.021722,5.000000,0.125000,0.015625,0.015625,0.984375,0.984375,0.000000,0.000000,0.000000,21.524242,"[[819   0]
+ [ 13   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR']",0.050000,0.000002,10.000000,0.125000,0.015625,0.015625,0.984375,0.984375,0.000000,0.000000,0.000000,28.645743,"[[819   0]
+ [ 13   0]]"
+[],0.050000,,100.000000,,,,,,,,,,
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR']",0.060000,0.050000,90.493391,0.109632,0.012019,0.012019,0.987981,0.987981,0.000000,0.000000,0.000000,23.374034,"[[822   0]
+ [ 10   0]]"
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR']",0.060000,0.100000,90.493391,0.109632,0.012019,0.012019,0.987981,0.987981,0.000000,0.000000,0.000000,20.064448,"[[822   0]
+ [ 10   0]]"
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR']",0.060000,0.150000,90.493391,0.109632,0.012019,0.012019,0.987981,0.987981,0.000000,0.000000,0.000000,20.064448,"[[822   0]
+ [ 10   0]]"
+"['Low Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Income GR']",0.060000,0.200000,90.493391,0.109632,0.012019,0.012019,0.987981,0.987981,0.000000,0.000000,0.000000,16.589487,"[[822   0]
+ [ 10   0]]"
+"['Low Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Income GR']",0.060000,0.250000,90.493391,0.109632,0.012019,0.012019,0.987981,0.987981,0.000000,0.000000,0.000000,16.589487,"[[822   0]
+ [ 10   0]]"
+"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Alpha GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'Net Profit GR']",0.060000,0.736638,0.100000,0.109632,0.012019,0.012019,0.987981,0.987981,0.000000,0.000000,0.000000,11.113934,"[[822   0]
+ [ 10   0]]"
+"['High Price GR', 'Low Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Net Profit GR']",0.060000,0.425507,0.500000,0.109632,0.012019,0.012019,0.987981,0.987981,0.000000,0.000000,0.000000,14.123657,"[[822   0]
+ [ 10   0]]"
+"['Low Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Income GR']",0.060000,0.170310,1.000000,0.109632,0.012019,0.012019,0.987981,0.987981,0.000000,0.000000,0.000000,16.589487,"[[822   0]
+ [ 10   0]]"
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Income GR']",0.060000,0.152892,2.000000,0.109632,0.012019,0.012019,0.987981,0.987981,0.000000,0.000000,0.000000,17.549513,"[[822   0]
+ [ 10   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR']",0.060000,0.022610,5.000000,0.109632,0.012019,0.012019,0.987981,0.987981,0.000000,0.000000,0.000000,33.252865,"[[822   0]
+ [ 10   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR']",0.060000,0.000000,10.000000,0.109632,0.012019,0.012019,0.987981,0.987981,0.000000,0.000000,0.000000,41.908632,"[[822   0]
+ [ 10   0]]"
+[],0.060000,,100.000000,,,,,,,,,,
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR']",0.070000,0.050000,139.533594,0.091725,0.008413,0.008413,0.991587,0.991587,0.000000,0.000000,0.000000,53.074744,"[[825   0]
+ [  7   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Dividend Value GR']",0.070000,0.100000,139.533594,0.091725,0.008413,0.008413,0.991587,0.991587,0.000000,0.000000,0.000000,42.443937,"[[825   0]
+ [  7   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Dividend Value GR']",0.070000,0.150000,139.533594,0.091725,0.008413,0.008413,0.991587,0.991587,0.000000,0.000000,0.000000,42.443937,"[[825   0]
+ [  7   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR']",0.070000,0.200000,139.533594,0.091725,0.008413,0.008413,0.991587,0.991587,0.000000,0.000000,0.000000,35.356959,"[[825   0]
+ [  7   0]]"
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR']",0.070000,0.250000,139.533594,0.091725,0.008413,0.008413,0.991587,0.991587,0.000000,0.000000,0.000000,30.932368,"[[825   0]
+ [  7   0]]"
+"['High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Alpha GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'Net Profit GR']",0.070000,0.680167,0.100000,0.091725,0.008413,0.008413,0.991587,0.991587,0.000000,0.000000,0.000000,15.443814,"[[825   0]
+ [  7   0]]"
+"['Low Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Net Profit GR']",0.070000,0.388333,0.500000,0.091725,0.008413,0.008413,0.991587,0.991587,0.000000,0.000000,0.000000,21.800552,"[[825   0]
+ [  7   0]]"
+"['Low Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Revenue GR', 'Dividend Value GR', 'Income GR']",0.070000,0.291665,1.000000,0.091725,0.008413,0.008413,0.991587,0.991587,0.000000,0.000000,0.000000,24.215311,"[[825   0]
+ [  7   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Dividend Value GR']",0.070000,0.097854,2.000000,0.091725,0.008413,0.008413,0.991587,0.991587,0.000000,0.000000,0.000000,42.443937,"[[825   0]
+ [  7   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR']",0.070000,0.005298,5.000000,0.091725,0.008413,0.008413,0.991587,0.991587,0.000000,0.000000,0.000000,53.074744,"[[825   0]
+ [  7   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR']",0.070000,0.000000,10.000000,0.091725,0.008413,0.008413,0.991587,0.991587,0.000000,0.000000,0.000000,66.163365,"[[825   0]
+ [  7   0]]"
+['No. of Trades GR'],0.070000,0.000000,100.000000,0.091725,0.008413,0.008413,0.991587,0.991587,0.000000,0.000000,0.000000,185.388647,"[[825   0]
+ [  7   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR']",0.080000,0.050000,183.102393,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,69.534195,"[[827   0]
+ [  5   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR']",0.080000,0.100000,183.102393,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,69.534195,"[[827   0]
+ [  5   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Dividend Value GR']",0.080000,0.150000,183.102393,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,55.610791,"[[827   0]
+ [  5   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Dividend Value GR']",0.080000,0.200000,183.102393,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,55.610791,"[[827   0]
+ [  5   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Dividend Value GR']",0.080000,0.250000,183.102393,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,55.610791,"[[827   0]
+ [  5   0]]"
+"['Low Price GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', '% Deli. Qty to Traded Qty GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'Net Profit GR']",0.080000,0.718903,0.100000,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,21.623539,"[[827   0]
+ [  5   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', '% Deli. Qty to Traded Qty GR', 'Spread Close-Open GR', 'Alpha GR', 'Revenue GR', 'Dividend Value GR', 'Income GR']",0.080000,0.426719,0.500000,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,30.845778,"[[827   0]
+ [  5   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', '% Deli. Qty to Traded Qty GR', 'Spread Close-Open GR', 'Dividend Value GR']",0.080000,0.308457,1.000000,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,46.330403,"[[827   0]
+ [  5   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Dividend Value GR']",0.080000,0.119278,2.000000,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,55.610791,"[[827   0]
+ [  5   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR']",0.080000,0.001409,5.000000,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,69.534195,"[[827   0]
+ [  5   0]]"
+"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR']",0.080000,0.001409,10.000000,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,69.534195,"[[827   0]
+ [  5   0]]"
+['No. of Trades GR'],0.080000,0.000000,100.000000,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,237.299508,"[[827   0]
+ [  5   0]]"
+"['Open Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR']",0.090000,0.050000,14.293967,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,10.514007,"[[827   0]
+ [  5   0]]"
+"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR']",0.090000,0.100000,14.293967,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,13.661275,"[[827   0]
+ [  5   0]]"
+"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR']",0.090000,0.150000,14.293967,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,13.661275,"[[827   0]
+ [  5   0]]"
+"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Dividend Value GR']",0.090000,0.200000,14.293967,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,11.726906,"[[827   0]
+ [  5   0]]"
+"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Dividend Value GR']",0.090000,0.250000,14.293967,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,11.726906,"[[827   0]
+ [  5   0]]"
+"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', '% Deli. Qty to Traded Qty GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'Net Profit GR']",0.090000,0.732117,0.100000,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,4.951623,"[[827   0]
+ [  5   0]]"
+"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'Total Turnover (Rs.) GR', '% Deli. Qty to Traded Qty GR', 'Spread Close-Open GR', 'Alpha GR', 'Dividend Value GR']",0.090000,0.432743,0.500000,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,7.503716,"[[827   0]
+ [  5   0]]"
+"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Dividend Value GR']",0.090000,0.315660,1.000000,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,10.265507,"[[827   0]
+ [  5   0]]"
+"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR']",0.090000,0.055948,2.000000,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,13.661275,"[[827   0]
+ [  5   0]]"
+"['Open Price GR', 'Low Price GR', 'WAP GR', 'Spread Close-Open GR']",0.090000,0.024266,5.000000,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,11.887386,"[[827   0]
+ [  5   0]]"
+['Spread Close-Open GR'],0.090000,0.000160,10.000000,0.077522,0.006010,0.006010,0.993990,0.993990,0.000000,0.000000,0.000000,29.500171,"[[827   0]
+ [  5   0]]"
+[],0.090000,,100.000000,,,,,,,,,,
+['Spread Close-Open GR'],0.100000,0.050000,24.075207,0.049029,0.002404,0.002404,0.997596,0.997596,0.000000,0.000000,0.000000,38.891299,"[[830   0]
+ [  2   0]]"
+"['Open Price GR', 'Spread Close-Open GR']",0.100000,0.100000,24.075207,0.049029,0.002404,0.002404,0.997596,0.997596,0.000000,0.000000,0.000000,21.418681,"[[830   0]
+ [  2   0]]"
+"['Open Price GR', 'Spread Close-Open GR']",0.100000,0.150000,24.075207,0.049029,0.002404,0.002404,0.997596,0.997596,0.000000,0.000000,0.000000,21.418681,"[[830   0]
+ [  2   0]]"
+"['Open Price GR', 'Spread Close-Open GR', 'Alpha GR']",0.100000,0.200000,24.075207,0.049029,0.002404,0.002404,0.997596,0.997596,0.000000,0.000000,0.000000,14.362772,"[[830   0]
+ [  2   0]]"
+"['Open Price GR', 'Spread Close-Open GR', 'Alpha GR', 'Dividend Value GR']",0.100000,0.250000,24.075207,0.049029,0.002404,0.002404,0.997596,0.997596,0.000000,0.000000,0.000000,10.773907,"[[830   0]
+ [  2   0]]"
+"['Open Price GR', 'Low Price GR', 'No.of Shares GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', '% Deli. Qty to Traded Qty GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR', 'Income GR', 'Net Profit GR']",0.100000,0.743569,0.100000,0.049029,0.002404,0.002404,0.997596,0.997596,0.000000,0.000000,0.000000,4.157042,"[[830   0]
+ [  2   0]]"
+"['Open Price GR', 'Spread Close-Open GR', 'Alpha GR', 'Dividend Value GR']",0.100000,0.205048,0.500000,0.049029,0.002404,0.002404,0.997596,0.997596,0.000000,0.000000,0.000000,10.773907,"[[830   0]
+ [  2   0]]"
+"['Open Price GR', 'Spread Close-Open GR', 'Alpha GR', 'Dividend Value GR']",0.100000,0.205048,1.000000,0.049029,0.002404,0.002404,0.997596,0.997596,0.000000,0.000000,0.000000,10.773907,"[[830   0]
+ [  2   0]]"
+"['Open Price GR', 'Spread Close-Open GR']",0.100000,0.099344,2.000000,0.049029,0.002404,0.002404,0.997596,0.997596,0.000000,0.000000,0.000000,21.418681,"[[830   0]
+ [  2   0]]"
+['Spread Close-Open GR'],0.100000,0.000001,5.000000,0.049029,0.002404,0.002404,0.997596,0.997596,0.000000,0.000000,0.000000,38.891299,"[[830   0]
+ [  2   0]]"
+['Spread Close-Open GR'],0.100000,0.000001,10.000000,0.049029,0.002404,0.002404,0.997596,0.997596,0.000000,0.000000,0.000000,38.891299,"[[830   0]
+ [  2   0]]"
+[],0.100000,,100.000000,,,,,,,,,,
