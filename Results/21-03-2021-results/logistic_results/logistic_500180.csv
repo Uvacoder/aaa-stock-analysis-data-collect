@@ -1,0 +1,143 @@
+root_mean_squared_error,mean_absolute_error,mean_squared_error,confidence,accuracy,precision,recall,f1_score,confusion matrix,penalty,C,p_f_value,threshold,features
+0.4404315305588008,0.1939799331103679,0.1939799331103679,0.8060200668896321,0.8060200668896321,1.0,0.005714285714285714,0.011363636363636362,"[[722   0]
+ [174   1]]",l2,0.001,p_0.05,0.01,"['No.of Shares GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Beta GR']"
+0.4404315305588008,0.1939799331103679,0.1939799331103679,0.8060200668896321,0.8060200668896321,1.0,0.005714285714285714,0.011363636363636362,"[[722   0]
+ [174   1]]",l2,0.001,p_0.1,0.01,"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread Close-Open GR', 'Beta GR', 'EPS GR']"
+0.4404315305588008,0.1939799331103679,0.1939799331103679,0.8060200668896321,0.8060200668896321,1.0,0.005714285714285714,0.011363636363636362,"[[722   0]
+ [174   1]]",l2,0.001,p_0.15,0.01,"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', 'Spread Close-Open GR', 'Beta GR', 'EPS GR']"
+0.4404315305588008,0.1939799331103679,0.1939799331103679,0.8060200668896321,0.8060200668896321,1.0,0.005714285714285714,0.011363636363636362,"[[722   0]
+ [174   1]]",l2,0.001,p_0.2,0.01,"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', 'Spread Close-Open GR', 'Beta GR', 'Dividend Value GR', 'EPS GR']"
+0.4404315305588008,0.1939799331103679,0.1939799331103679,0.8060200668896321,0.8060200668896321,1.0,0.005714285714285714,0.011363636363636362,"[[722   0]
+ [174   1]]",l2,0.001,p_0.25,0.01,"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', '% Deli. Qty to Traded Qty GR', 'Spread Close-Open GR', 'Beta GR', 'Dividend Value GR', 'EPS GR']"
+0.4404315305588008,0.1939799331103679,0.1939799331103679,0.8060200668896321,0.8060200668896321,0.6666666666666666,0.011428571428571429,0.02247191011235955,"[[721   1]
+ [173   2]]",l2,10.0,f_0.1,0.01,"['High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', '% Deli. Qty to Traded Qty GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Expenditure GR', 'Net Profit GR', 'EPS GR']"
+0.4404315305588008,0.1939799331103679,0.1939799331103679,0.8060200668896321,0.8060200668896321,0.6666666666666666,0.011428571428571429,0.02247191011235955,"[[721   1]
+ [173   2]]",none,0.001,f_0.5,0.01,"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', '% Deli. Qty to Traded Qty GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Net Profit GR', 'EPS GR']"
+0.4404315305588008,0.1939799331103679,0.1939799331103679,0.8060200668896321,0.8060200668896321,1.0,0.005714285714285714,0.011363636363636362,"[[722   0]
+ [174   1]]",l2,0.001,f_1,0.01,"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', '% Deli. Qty to Traded Qty GR', 'Spread Close-Open GR', 'Beta GR', 'Dividend Value GR', 'Net Profit GR', 'EPS GR']"
+0.4404315305588008,0.1939799331103679,0.1939799331103679,0.8060200668896321,0.8060200668896321,1.0,0.005714285714285714,0.011363636363636362,"[[722   0]
+ [174   1]]",l2,0.001,f_2,0.01,"['No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', 'Spread Close-Open GR', 'Beta GR', 'Dividend Value GR', 'EPS GR']"
+0.4404315305588008,0.1939799331103679,0.1939799331103679,0.8060200668896321,0.8060200668896321,1.0,0.005714285714285714,0.011363636363636362,"[[722   0]
+ [174   1]]",l2,0.001,f_5,0.01,['Spread Close-Open GR']
+0.2773500981126146,0.07692307692307693,0.07692307692307693,0.9230769230769231,0.9230769230769231,0.0,0.0,0.0,"[[828   2]
+ [ 67   0]]",none,0.001,p_0.01,0.02,"['Beta GR', 'Dividend Value GR']"
+0.2773500981126146,0.07692307692307693,0.07692307692307693,0.9230769230769231,0.9230769230769231,0.0,0.0,0.0,"[[828   2]
+ [ 67   0]]",none,0.001,p_0.05,0.02,"['Spread Close-Open GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR']"
+0.2773500981126146,0.07692307692307693,0.07692307692307693,0.9230769230769231,0.9230769230769231,0.0,0.0,0.0,"[[828   2]
+ [ 67   0]]",none,0.001,p_0.1,0.02,"['Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.2773500981126146,0.07692307692307693,0.07692307692307693,0.9230769230769231,0.9230769230769231,0.0,0.0,0.0,"[[828   2]
+ [ 67   0]]",none,0.001,p_0.15,0.02,"['Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.2753329797196355,0.0758082497212932,0.0758082497212932,0.9241917502787068,0.9241917502787068,0.0,0.0,0.0,"[[829   1]
+ [ 67   0]]",l2,1.0,p_0.2,0.02,"['Low Price GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'EPS GR']"
+0.2753329797196355,0.0758082497212932,0.0758082497212932,0.9241917502787068,0.9241917502787068,0.0,0.0,0.0,"[[829   1]
+ [ 67   0]]",l2,1.0,p_0.25,0.02,"['Low Price GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'EPS GR']"
+0.2773500981126146,0.07692307692307693,0.07692307692307693,0.9230769230769231,0.9230769230769231,0.0,0.0,0.0,"[[828   2]
+ [ 67   0]]",none,0.001,f_0.1,0.02,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', '% Deli. Qty to Traded Qty GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'Net Profit GR', 'EPS GR']"
+0.2773500981126146,0.07692307692307693,0.07692307692307693,0.9230769230769231,0.9230769230769231,0.0,0.0,0.0,"[[828   2]
+ [ 67   0]]",none,0.001,f_0.5,0.02,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'EPS GR']"
+0.2753329797196355,0.0758082497212932,0.0758082497212932,0.9241917502787068,0.9241917502787068,0.0,0.0,0.0,"[[829   1]
+ [ 67   0]]",l2,1.0,f_1,0.02,"['High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'EPS GR']"
+0.2773500981126146,0.07692307692307693,0.07692307692307693,0.9230769230769231,0.9230769230769231,0.0,0.0,0.0,"[[828   2]
+ [ 67   0]]",none,0.001,f_2,0.02,"['Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.2773500981126146,0.07692307692307693,0.07692307692307693,0.9230769230769231,0.9230769230769231,0.0,0.0,0.0,"[[828   2]
+ [ 67   0]]",none,0.001,f_5,0.02,"['Beta GR', 'Revenue GR', 'Dividend Value GR']"
+0.2773500981126146,0.07692307692307693,0.07692307692307693,0.9230769230769231,0.9230769230769231,0.0,0.0,0.0,"[[828   2]
+ [ 67   0]]",none,0.001,f_10,0.02,"['Beta GR', 'Dividend Value GR']"
+0.20033416898825335,0.04013377926421405,0.04013377926421405,0.959866220735786,0.959866220735786,0.4,0.05714285714285714,0.09999999999999999,"[[859   3]
+ [ 33   2]]",none,0.001,p_0.01,0.03,"['Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.20033416898825335,0.04013377926421405,0.04013377926421405,0.959866220735786,0.959866220735786,0.4,0.05714285714285714,0.09999999999999999,"[[859   3]
+ [ 33   2]]",none,0.001,p_0.05,0.03,"['Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.20033416898825335,0.04013377926421405,0.04013377926421405,0.959866220735786,0.959866220735786,0.4,0.05714285714285714,0.09999999999999999,"[[859   3]
+ [ 33   2]]",none,0.001,p_0.1,0.03,"['High Price GR', 'Low Price GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.20033416898825335,0.04013377926421405,0.04013377926421405,0.959866220735786,0.959866220735786,0.4,0.05714285714285714,0.09999999999999999,"[[859   3]
+ [ 33   2]]",none,0.001,p_0.15,0.03,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.20033416898825335,0.04013377926421405,0.04013377926421405,0.959866220735786,0.959866220735786,0.4,0.05714285714285714,0.09999999999999999,"[[859   3]
+ [ 33   2]]",none,0.001,p_0.2,0.03,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.20033416898825335,0.04013377926421405,0.04013377926421405,0.959866220735786,0.959866220735786,0.4,0.05714285714285714,0.09999999999999999,"[[859   3]
+ [ 33   2]]",none,0.001,p_0.25,0.03,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.20033416898825335,0.04013377926421405,0.04013377926421405,0.959866220735786,0.959866220735786,0.0,0.0,0.0,"[[861   1]
+ [ 35   0]]",l2,1.0,f_0.1,0.03,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', '% Deli. Qty to Traded Qty GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'EPS GR']"
+0.20033416898825335,0.04013377926421405,0.04013377926421405,0.959866220735786,0.959866220735786,0.4,0.05714285714285714,0.09999999999999999,"[[859   3]
+ [ 33   2]]",none,0.001,f_0.5,0.03,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.20033416898825335,0.04013377926421405,0.04013377926421405,0.959866220735786,0.959866220735786,0.4,0.05714285714285714,0.09999999999999999,"[[859   3]
+ [ 33   2]]",none,0.001,f_1,0.03,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.20033416898825335,0.04013377926421405,0.04013377926421405,0.959866220735786,0.959866220735786,0.4,0.05714285714285714,0.09999999999999999,"[[859   3]
+ [ 33   2]]",none,0.001,f_2,0.03,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.20033416898825335,0.04013377926421405,0.04013377926421405,0.959866220735786,0.959866220735786,0.4,0.05714285714285714,0.09999999999999999,"[[859   3]
+ [ 33   2]]",none,0.001,f_5,0.03,"['Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.20033416898825335,0.04013377926421405,0.04013377926421405,0.959866220735786,0.959866220735786,0.4,0.05714285714285714,0.09999999999999999,"[[859   3]
+ [ 33   2]]",none,0.001,f_10,0.03,"['Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR']"
+0.14932027335788825,0.022296544035674472,0.022296544035674472,0.9777034559643255,0.9777034559643255,0.0,0.0,0.0,"[[877   1]
+ [ 19   0]]",l2,1.0,p_0.01,0.04,"['Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR']"
+0.14932027335788825,0.022296544035674472,0.022296544035674472,0.9777034559643255,0.9777034559643255,0.0,0.0,0.0,"[[877   1]
+ [ 19   0]]",l2,1.0,p_0.05,0.04,"['High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR']"
+0.14932027335788825,0.022296544035674472,0.022296544035674472,0.9777034559643255,0.9777034559643255,0.0,0.0,0.0,"[[877   1]
+ [ 19   0]]",l2,1.0,p_0.1,0.04,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Expenditure GR']"
+0.14932027335788825,0.022296544035674472,0.022296544035674472,0.9777034559643255,0.9777034559643255,0.3333333333333333,0.05263157894736842,0.09090909090909091,"[[876   2]
+ [ 18   1]]",none,0.001,p_0.15,0.04,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.14932027335788825,0.022296544035674472,0.022296544035674472,0.9777034559643255,0.9777034559643255,0.3333333333333333,0.05263157894736842,0.09090909090909091,"[[876   2]
+ [ 18   1]]",none,0.001,p_0.2,0.04,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.14932027335788825,0.022296544035674472,0.022296544035674472,0.9777034559643255,0.9777034559643255,0.0,0.0,0.0,"[[877   1]
+ [ 19   0]]",l2,1.0,p_0.25,0.04,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'Net Profit GR']"
+0.14932027335788825,0.022296544035674472,0.022296544035674472,0.9777034559643255,0.9777034559643255,0.0,0.0,0.0,"[[877   1]
+ [ 19   0]]",l2,1.0,f_0.1,0.04,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'Net Profit GR', 'EPS GR']"
+0.14932027335788825,0.022296544035674472,0.022296544035674472,0.9777034559643255,0.9777034559643255,0.0,0.0,0.0,"[[877   1]
+ [ 19   0]]",l2,1.0,f_0.5,0.04,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'Net Profit GR', 'EPS GR']"
+0.14932027335788825,0.022296544035674472,0.022296544035674472,0.9777034559643255,0.9777034559643255,0.0,0.0,0.0,"[[877   1]
+ [ 19   0]]",l2,1.0,f_1,0.04,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'Net Profit GR']"
+0.14932027335788825,0.022296544035674472,0.022296544035674472,0.9777034559643255,0.9777034559643255,0.3333333333333333,0.05263157894736842,0.09090909090909091,"[[876   2]
+ [ 18   1]]",none,0.001,f_2,0.04,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR']"
+0.14932027335788825,0.022296544035674472,0.022296544035674472,0.9777034559643255,0.9777034559643255,0.0,0.0,0.0,"[[877   1]
+ [ 19   0]]",l2,1.0,f_5,0.04,"['High Price GR', 'Low Price GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR']"
+0.14932027335788825,0.022296544035674472,0.022296544035674472,0.9777034559643255,0.9777034559643255,0.0,0.0,0.0,"[[877   1]
+ [ 19   0]]",l2,1.0,f_10,0.04,"['Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR']"
+0.12931515002796792,0.016722408026755852,0.016722408026755852,0.9832775919732442,0.9832775919732442,0.0,0.0,0.0,"[[882   4]
+ [ 11   0]]",none,0.001,p_0.01,0.05,"['Open Price GR', 'Low Price GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR']"
+0.12931515002796792,0.016722408026755852,0.016722408026755852,0.9832775919732442,0.9832775919732442,0.0,0.0,0.0,"[[882   4]
+ [ 11   0]]",none,0.001,p_0.05,0.05,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR']"
+0.12931515002796792,0.016722408026755852,0.016722408026755852,0.9832775919732442,0.9832775919732442,0.0,0.0,0.0,"[[882   4]
+ [ 11   0]]",none,0.001,p_0.1,0.05,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR']"
+0.12931515002796792,0.016722408026755852,0.016722408026755852,0.9832775919732442,0.9832775919732442,0.0,0.0,0.0,"[[882   4]
+ [ 11   0]]",none,0.001,p_0.15,0.05,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Net Profit GR']"
+0.12931515002796792,0.016722408026755852,0.016722408026755852,0.9832775919732442,0.9832775919732442,0.0,0.0,0.0,"[[882   4]
+ [ 11   0]]",none,0.001,p_0.2,0.05,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Net Profit GR']"
+0.12931515002796792,0.016722408026755852,0.016722408026755852,0.9832775919732442,0.9832775919732442,0.0,0.0,0.0,"[[882   4]
+ [ 11   0]]",none,0.001,p_0.25,0.05,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Expenditure GR', 'Net Profit GR']"
+0.11073887853694817,0.012263099219620958,0.012263099219620958,0.987736900780379,0.987736900780379,0.0,0.0,0.0,"[[886   0]
+ [ 11   0]]",l2,1.0,f_0.1,0.05,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', 'Spread High-Low GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Expenditure GR', 'Net Profit GR', 'EPS GR']"
+0.12931515002796792,0.016722408026755852,0.016722408026755852,0.9832775919732442,0.9832775919732442,0.0,0.0,0.0,"[[882   4]
+ [ 11   0]]",none,0.001,f_0.5,0.05,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Expenditure GR', 'Net Profit GR']"
+0.12931515002796792,0.016722408026755852,0.016722408026755852,0.9832775919732442,0.9832775919732442,0.0,0.0,0.0,"[[882   4]
+ [ 11   0]]",none,0.001,f_1,0.05,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Expenditure GR', 'Net Profit GR']"
+0.12931515002796792,0.016722408026755852,0.016722408026755852,0.9832775919732442,0.9832775919732442,0.0,0.0,0.0,"[[882   4]
+ [ 11   0]]",none,0.001,f_2,0.05,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Net Profit GR']"
+0.12931515002796792,0.016722408026755852,0.016722408026755852,0.9832775919732442,0.9832775919732442,0.0,0.0,0.0,"[[882   4]
+ [ 11   0]]",none,0.001,f_5,0.05,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR']"
+0.12931515002796792,0.016722408026755852,0.016722408026755852,0.9832775919732442,0.9832775919732442,0.0,0.0,0.0,"[[882   4]
+ [ 11   0]]",none,0.001,f_10,0.05,"['Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR']"
+0.05783149319662402,0.0033444816053511705,0.0033444816053511705,0.9966555183946488,0.9966555183946488,0.0,0.0,0.0,"[[894   0]
+ [  3   0]]",l2,10.0,p_0.01,0.1,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Alpha GR', 'Beta GR']"
+0.05783149319662402,0.0033444816053511705,0.0033444816053511705,0.9966555183946488,0.9966555183946488,0.0,0.0,0.0,"[[894   0]
+ [  3   0]]",l2,10.0,p_0.05,0.1,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR', 'Net Profit GR']"
+0.05783149319662402,0.0033444816053511705,0.0033444816053511705,0.9966555183946488,0.9966555183946488,0.0,0.0,0.0,"[[894   0]
+ [  3   0]]",l2,10.0,p_0.1,0.1,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR', 'Net Profit GR']"
+0.05783149319662402,0.0033444816053511705,0.0033444816053511705,0.9966555183946488,0.9966555183946488,0.0,0.0,0.0,"[[894   0]
+ [  3   0]]",l2,10.0,p_0.15,0.1,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR', 'Net Profit GR']"
+0.05783149319662402,0.0033444816053511705,0.0033444816053511705,0.9966555183946488,0.9966555183946488,0.0,0.0,0.0,"[[894   0]
+ [  3   0]]",l2,10.0,p_0.2,0.1,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR', 'Net Profit GR']"
+0.05783149319662402,0.0033444816053511705,0.0033444816053511705,0.9966555183946488,0.9966555183946488,0.0,0.0,0.0,"[[894   0]
+ [  3   0]]",l2,10.0,p_0.25,0.1,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Net Profit GR']"
+0.05783149319662402,0.0033444816053511705,0.0033444816053511705,0.9966555183946488,0.9966555183946488,0.0,0.0,0.0,"[[894   0]
+ [  3   0]]",l2,10.0,f_0.1,0.1,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'No.of Shares GR', 'No. of Trades GR', 'Total Turnover (Rs.) GR', 'Deliverable Quantity GR', 'Spread Close-Open GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Income GR', 'Net Profit GR', 'EPS GR']"
+0.05783149319662402,0.0033444816053511705,0.0033444816053511705,0.9966555183946488,0.9966555183946488,0.0,0.0,0.0,"[[894   0]
+ [  3   0]]",l2,10.0,f_0.5,0.1,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Net Profit GR', 'EPS GR']"
+0.05783149319662402,0.0033444816053511705,0.0033444816053511705,0.9966555183946488,0.9966555183946488,0.0,0.0,0.0,"[[894   0]
+ [  3   0]]",l2,10.0,f_1,0.1,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Alpha GR', 'Beta GR', 'Revenue GR', 'Dividend Value GR', 'Net Profit GR']"
+0.05783149319662402,0.0033444816053511705,0.0033444816053511705,0.9966555183946488,0.9966555183946488,0.0,0.0,0.0,"[[894   0]
+ [  3   0]]",l2,10.0,f_2,0.1,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR', 'Net Profit GR']"
+0.05783149319662402,0.0033444816053511705,0.0033444816053511705,0.9966555183946488,0.9966555183946488,0.0,0.0,0.0,"[[894   0]
+ [  3   0]]",l2,10.0,f_5,0.1,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Alpha GR', 'Beta GR', 'Dividend Value GR']"
+0.05783149319662402,0.0033444816053511705,0.0033444816053511705,0.9966555183946488,0.9966555183946488,0.0,0.0,0.0,"[[894   0]
+ [  3   0]]",l2,10.0,f_10,0.1,"['Open Price GR', 'High Price GR', 'Low Price GR', 'Close Price GR', 'WAP GR', 'Alpha GR', 'Beta GR']"
+0.07466013667894413,0.005574136008918618,0.005574136008918618,0.9944258639910813,0.9944258639910813,0.0,0.0,0.0,"[[892   2]
+ [  3   0]]",none,0.001,f_100,0.1,['Beta GR']
