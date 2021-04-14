@@ -1,28 +1,39 @@
 import { Paper, Typography } from "@material-ui/core";
+import axios from "axios";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import axios from "axios";
 import Loader from "react-loader-spinner";
 
-class Revenue extends React.Component {
+class Top extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading: false,
+      num: 10,
+      type: "buy",
       topCompanies: [],
-      num: 30,
-      loading: true,
     };
   }
 
   componentDidMount = () => {
-    console.log("Revenue");
+    console.log("Top");
+    const { match } = this.props;
+    const { num, type } = match.params;
+    this.setState({ num: num, type: type, loading: true }, () => {});
+
     axios.get("/previousdaystockdetails").then((s) => {
       let companyStockDetails = s.data;
-      companyStockDetails.sort((a, b) => {
-        return a["Revenue"] - b["Revenue"];
-      });
-      companyStockDetails = companyStockDetails.slice(0, this.state.num);
+      if (type === "sell") {
+        companyStockDetails.sort((a, b) => {
+          return a["Close Price"] - b["Close Price"];
+        });
+      } else if (type === "buy") {
+        companyStockDetails.sort((a, b) => {
+          return b["Close Price"] - a["Close Price"];
+        });
+      }
+      companyStockDetails = companyStockDetails.slice(0, num);
       let topCompanies = [];
       for (let index = 0; index < companyStockDetails.length; index++) {
         const element = companyStockDetails[index];
@@ -49,7 +60,8 @@ class Revenue extends React.Component {
               }}
             >
               <Typography variant="h4" color="primary">
-                Top {this.state.num} Companies Revenue wise
+                Top {this.state.num} Companies for{" "}
+                {this.state.type === "buy" ? "Investing" : "Trading"}
               </Typography>
             </Paper>
             {this.state.topCompanies.map((company) => {
@@ -77,4 +89,4 @@ class Revenue extends React.Component {
   }
 }
 
-export default Revenue;
+export default Top;

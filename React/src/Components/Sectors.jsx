@@ -1,7 +1,7 @@
-import React from "react";
-import firebase from "firebase";
-import {  TextField  } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
 import Autocomplete from "@material-ui/lab/Autocomplete";
+import axios from "axios";
+import React from "react";
 
 class Sectors extends React.Component {
   constructor(props) {
@@ -16,42 +16,38 @@ class Sectors extends React.Component {
 
   componentDidMount = () => {
     console.log("Sectors");
-    this.getSectorDetailsFromFirebase();
+    axios.get("/sectors").then((s) => {
+      this.setState({ sectors: s.data }, () => {});
+    });
   };
 
-  selectedSector = (val) => {
-    this.setState({ selectedSector: val }, () => {});
-    this.setState(
-      { selectedSectorCompanies: this.state.sectors[val] },
-      () => {}
-    );
+  selectedSector = (e, val) => {
+    if (val === null) {
+      this.setState(
+        { selectedSector: "", selectedSectorCompanies: [] },
+        () => {}
+      );
+    } else {
+      this.setState(
+        {
+          selectedSector: val,
+          selectedSectorCompanies: this.state.sectors[val],
+        },
+        () => {}
+      );
+    }
   };
 
   selectedCompany = (val) => {
-    const { match, location, history } = this.props;
-    this.setState({ selectedCompany: val }, () => {});
-    let company = val.replace(/[#$.\.]/g, "");
-
-    history.push("companydetails/" + company);
+    const { history } = this.props;
+    if (val === null) {
+      history.push("/");
+    } else {
+      this.setState({ selectedCompany: val }, () => {
+        history.push("companydetails/" + val);
+      });
+    }
   };
-
-  getSectorDetailsFromFirebase = () => {
-    console.log("getAllCompanyStockDetailsFromFirebase");
-    const dbref = firebase.database().ref();
-    dbref.child("sectors").on(
-      "value",
-      (snap) => {
-        if (snap.val() === null) {
-        } else {
-          this.setState({ sectors: snap.val() }, () => {});
-        }
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
-  };
-
   render() {
     return (
       <React.Fragment>
@@ -59,7 +55,7 @@ class Sectors extends React.Component {
           <Autocomplete
             style={{ width: "50%", align: "center" }}
             onChange={(e, val) => {
-              this.selectedSector(val);
+              this.selectedSector(e, val);
             }}
             id="search for sector"
             freeSolo

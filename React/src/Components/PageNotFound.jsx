@@ -1,13 +1,13 @@
+import React from "react";
 
-import React from 'react'
-
-class PageNotFound extends React.Component{
-
-    render(){
-        return(
-            <React.Fragment><h1>Page Not Found</h1></React.Fragment>
-        )
-    }
+class PageNotFound extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <h1>Page Not Found</h1>
+      </React.Fragment>
+    );
+  }
 }
 
-export default PageNotFound
+export default PageNotFound;

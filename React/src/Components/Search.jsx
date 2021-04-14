@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 class Search extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = { selectedCompany: "" };
   }
 

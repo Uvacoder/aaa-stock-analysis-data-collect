@@ -1,27 +1,23 @@
-import React from "react";
-import firebase from "firebase";
-import { Route, Switch } from "react-router-dom";
-
-import Toolbar from "@material-ui/core/Toolbar";
 import AppBar from "@material-ui/core/AppBar";
-import Drawer from "@material-ui/core/Drawer";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import Drawer from "@material-ui/core/Drawer";
 import { withStyles } from "@material-ui/core/styles";
-
-import NavigationBar from "./NavigationBar";
-import Login from "./Login";
+import Toolbar from "@material-ui/core/Toolbar";
+import React from "react";
+import { Route, Switch, withRouter } from "react-router-dom";
 import About from "./About";
-import Performance from "./Performance";
-import SideBar from "./SideBar";
-import Top10Sell from "./Top10Sell";
-import Top10Buy from "./Top10Buy";
-import Top30Buy from "./Top30Buy";
-import Top30Sell from "./Top30Sell";
-import Sectors from "./Sectors";
-import Dashboard from "./Dashboard";
 import CompanyDetails from "./CompanyDetails";
-import Revenue from "./Revenue";
+import Comparision from "./Comparision";
+import Login from "./Login";
+import NavigationBar from "./NavigationBar";
 import PageNotFound from "./PageNotFound";
+import Performance from "./Performance";
+import Revenue from "./Revenue";
+import Sectors from "./Sectors";
+import SideBar from "./SideBar";
+import SP500 from "./SP500";
+import { Divider } from "@material-ui/core";
+import Top from "./Top";
 const drawerWidth = 250;
 
 const styles = (theme) => ({
@@ -40,11 +36,21 @@ const styles = (theme) => ({
     width: drawerWidth,
   },
   // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
+  toolbar: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    ...theme.mixins.toolbar,
+  },
   content: {
-    flexGrow: 1,
     backgroundColor: theme.palette.background.default,
+    flexGrow: 1,
+    flexWrap: "wrap",
     padding: theme.spacing(3),
+    minWidth: "480px",
+    width: "auto",
+    height: "100%",
+    overflowX: "hidden",
   },
 });
 
@@ -53,44 +59,11 @@ class Home extends React.Component {
     super(props);
     this.state = {
       companyNames: [],
-      selectedCompany: "",
-      companyDetails: {},
-      // selectedCompanyDetails: [],
     };
   }
 
-  getCompanyDetailsFromFirebase = () => {
-    const dbref = firebase.database().ref();
-    dbref.child("companies").on(
-      "value",
-      (snap) => {
-        this.setState({ companyNames: Object.keys(snap.val()) }, () => {});
-        this.setState({ companyDetails: snap.val() }, () => {});
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
-  };
-
-  getSelectedCompany = (company) => {
-    if (company === null) {
-      this.setState({ selectedCompany: "" }, () => {});
-      return;
-    }
-    this.setState({ selectedCompany: company }, () => {});
-  };
-
-  // getSelectedCompanyDetails = (company) => {
-  //   this.setState(
-  //     { selectedCompanyDetails: this.state.companyDetails[company] },
-  //     () => {}
-  //   );
-  // };
-
   componentDidMount = () => {
     console.log("Home");
-    this.getCompanyDetailsFromFirebase();
   };
 
   render() {
@@ -105,14 +78,9 @@ class Home extends React.Component {
             style={{ backgroundColor: "inherit" }}
           >
             <Toolbar>
-              {this.state.companyNames.length !== 0 && (
-                <NavigationBar
-                  styles ={{margin :"10px"}}
-                  searchforcompanies={this.state.companyNames}
-                  onSelectCompany={this.getSelectedCompany}
-                />
-              )}
+              <NavigationBar />
             </Toolbar>
+            <Divider />
           </AppBar>
           <Drawer
             className={classes.drawer}
@@ -127,9 +95,9 @@ class Home extends React.Component {
           </Drawer>
           <main className={classes.content}>
             <div className={classes.toolbar} />
-            {this.state.selectedCompany !== "" && (
-              <CompanyDetails selectedCompany={this.state.selectedCompany} />
-            )}
+            <Divider />
+            <Divider />
+            <Divider />
             <Switch>
               <Route exact path="/" />
               <Route exact path="/login" component={Login} />
@@ -137,37 +105,30 @@ class Home extends React.Component {
               <Route exact path="/performance" component={Performance} />
               <Route
                 exact
-                path="/top/10/sell"
-                component={() => (
-                  <Top10Sell companyNames={this.state.companyNames} />
-                )}
-              />
-              <Route
-                exact
-                path="/top/10/buy"
-                component={() => (
-                  <Top10Buy companyNames={this.state.companyNames} />
-                )}
-              />
-              <Route
-                exact
-                path="/top/30/buy"
-                component={() => (
-                  <Top30Buy companyNames={this.state.companyNames} />
-                )}
-              />
-              <Route
-                exact
-                path="/top/30/sell"
-                component={() => (
-                  <Top30Sell companyNames={this.state.companyNames} />
-                )}
+                path="/top/:num/:type"
+                render={(props) => {
+                  const {
+                    match: {
+                      params: { num, type },
+                    },
+                  } = props;
+                  return <Top key={`num=${num}&type=${type}`} {...props} />;
+                }}
               />
               <Route exact path="/sectors" component={Sectors} />
               <Route
                 exact
                 path="/companydetails/:company"
-                component={CompanyDetails}
+                render={(props) => {
+                  const {
+                    match: {
+                      params: { company },
+                    },
+                  } = props;
+                  return (
+                    <CompanyDetails key={`company=${company}`} {...props} />
+                  );
+                }}
               />
               <Route
                 exact
@@ -176,6 +137,8 @@ class Home extends React.Component {
                   <Revenue companyNames={this.state.companyNames} />
                 )}
               />
+              <Route exact path="/sp500" component={SP500} />
+              <Route exact path="/comparision" component={Comparision} />
               <Route component={PageNotFound} />
             </Switch>
           </main>
@@ -185,4 +148,4 @@ class Home extends React.Component {
   }
 }
 
-export default withStyles(styles)(Home);
+export default withStyles(styles)(withRouter(Home));

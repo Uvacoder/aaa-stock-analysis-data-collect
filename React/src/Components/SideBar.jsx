@@ -1,6 +1,3 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import Typography from "@material-ui/core/Typography";
 import {
   Accordion,
   AccordionDetails,
@@ -8,6 +5,9 @@ import {
   Paper,
   withStyles,
 } from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
+import React from "react";
+import { NavLink } from "react-router-dom";
 const styles = (theme) => ({
   root: {
     width: "100%",
