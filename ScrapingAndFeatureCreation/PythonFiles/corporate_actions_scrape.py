@@ -42,7 +42,7 @@ def download_corporate_actions(security_id):
     """
     corporate_url = "https://www.bseindia.com/corporates/corporate_act.aspx"
 
-    path = os.path.join(os.getcwd(), "Data/CorporateActions")
+    path = os.path.join(os.getcwd(), os.path.join("Data", "CorporateActions"))
 
     if not os.path.exists(path):
         os.makedirs("Data/CorporateActions")

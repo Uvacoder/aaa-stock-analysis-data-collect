@@ -55,12 +55,12 @@ def download_stocks(security_id):
     download : downloads the file.
 
     """
-    path = os.path.join(os.getcwd(), "Data/Stock")
+    path = os.path.join(os.getcwd(), os.path.join("Data", "Stock"))
+
     stock_url = "https://www.bseindia.com/markets/equity/EQReports/StockPrcHistori.aspx?flag=0"
 
     if not os.path.exists(path):
         os.makedirs("Data/Stock")
-    print(path)
 
     def convert_date_to_unix_timestamp(stock_df):
         """

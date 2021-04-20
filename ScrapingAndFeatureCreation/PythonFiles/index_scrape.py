@@ -183,7 +183,7 @@ def download_index():
     try:
         driver = create_driver()
         driver.get(index_url)
-        set_index("S&P BSE 500")
+        set_index(index)
         # set_from_date("7", "Aug", "1999")
         set_from_date("02", "Aug", "2007")
 

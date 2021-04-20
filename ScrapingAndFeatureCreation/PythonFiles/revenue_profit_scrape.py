@@ -25,7 +25,8 @@ def download_revenue_profit(code, name):
     download : extracts the data from the page and saves to a csv file.
 
     """
-    path = os.path.join(os.getcwd(), "Data/Revenue")
+    path = os.path.join(os.getcwd(), os.path.join("Data", "Revenue"))
+
     if not os.path.exists(path):
         os.makedirs("Data/Revenue")
 
