@@ -785,3 +785,38 @@ def close_price_as_percent_of_LV_HV_BA(stock):
             stock.loc[specific_bands.index, bcols] = [
                 today/low, today/high, today/(high-low)]
     return stock
+
+
+def create_new_LB_UB(stock):
+    """
+    Creates new growth rate columns in the stock dataframe.
+    For Lower Band, Upper Lower 
+    for 30,90,180,360,720,1440 bands
+
+    Lower Lower = Close Price of that day/min close price in the band
+    Upper Band = Close Price of that day/max close price in the band
+
+    Parameters
+    ----------
+    
+    stock : dataframe
+
+    Returns
+    -------
+
+    stock : dataframe
+        updated dataframe with newly created columns.
+    """
+
+    bands = [30,90,180,360,720,1440]
+    for b in bands:
+        bcols = ["LB "+str(b) + " days","UB "+str(b)+" days"]
+        stock[bcols] = pd.DataFrame([[0]*len(bcols)], index=stock.index)
+        for i in range(stock.shape[0]):
+            s = i+1
+            specific_bands = stock.iloc[-(s):-(s+b+1):-1]
+            low = specific_bands["Close Price"].min()
+            high = specific_bands["Close Price"].max()
+#             today = stock.iloc[-(s)]["Close Price"]
+            stock.loc[specific_bands.index,bcols] = [low,high]
+    return stock

@@ -51,6 +51,7 @@ if __name__ == "__main__":
             stock_df = feature_creation.calculate_alpha(stock_df, index_df)
 
             stock_df = feature_creation.create_lower_upper_bands(stock_df)
+            stock_df = feature_creation.create_new_LB_UB(stock_df)
             stock_df = feature_creation.create_eps_pe_ratio_revenue_income_expenditure_net_profit(
                 revenue_df, stock_df)
             stock_df = feature_creation.add_next_day_columns(stock_df)
