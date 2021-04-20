@@ -200,7 +200,7 @@ def download_stocks(security_id):
             chrome web driver.
         """
         chromeOptions = webdriver.ChromeOptions()
-        # chromeOptions.add_argument("--headless")
+        chromeOptions.add_argument("--headless")
         chromeOptions.add_experimental_option(
             "prefs", {"download.default_directory": path})
         driver = webdriver.Chrome(
@@ -215,7 +215,9 @@ def download_stocks(security_id):
         old_df["Date"] = pd.to_datetime(old_df["Date"])
         last = old_df["Date"].head(1)[0]
         set_security_id(str(security_id))
-
+        today = datetime.datetime.today().strftime('%Y-%m-%d')
+        if today == last.strftime('%Y-%m-%d'):
+            return
         set_from_date(
             last.day, calendar.month_abbr[last.month], str(last.year))
         today = datetime.date.today()
