@@ -6,7 +6,7 @@ import math
 import traceback
 
 
-def calculate_beta(stock):
+def calculate_beta(stock, ind):
     """
 
     Creates a new Beta column in the stock dataframe
@@ -32,11 +32,11 @@ def calculate_beta(stock):
     stock : dataframe
         updated dataframe with new Beta column
     """
-    path = os.path.join(os.getcwd(), "Data")
+    # path = os.path.join(os.getcwd(), "Data")
 
     stock["% Return of Company"] = (
         (stock["Close Price"] / stock['Close Price'].shift(1))-1)*100
-    ind = pd.read_csv(os.path.join(path, "Index.csv"))
+    # ind = pd.read_csv(os.path.join(path, "Index.csv"))
     ind["Date"] = pd.to_datetime(ind["Date"])
     s = stock.Date.head(1).values[0]
     e = stock.Date.tail(1).values[0]
@@ -62,7 +62,7 @@ def calculate_beta(stock):
     return stock
 
 
-def add_risk_free_column(stock):
+def add_risk_free_column(stock, riskrates):
     """
 
     Creates a new Rate column in the stock dataframe using riskfreerate file.
@@ -80,9 +80,9 @@ def add_risk_free_column(stock):
         updated dataframe with Rate column
 
     """
-    path = os.path.join(os.getcwd(), "Data")
+    # path = os.path.join(os.getcwd(), "Data")
 
-    riskrates = pd.read_csv(os.path.join(path, "RiskFreeRate.csv"))
+    # riskrates = pd.read_csv(os.path.join(path, "RiskFreeRate.csv"))
     riskrates["Date"] = pd.to_datetime(riskrates["Date"])
     stock["Date"] = pd.to_datetime(stock["Date"])
     # riskrates["Rate"] = pd.to_numeric(riskrates["Rate"])
@@ -94,7 +94,7 @@ def add_risk_free_column(stock):
     return res
 
 
-def calculate_alpha(stock):
+def calculate_alpha(stock, ind):
     """
 
     Creates a new Alpha column in the stock dataframe
@@ -122,11 +122,11 @@ def calculate_alpha(stock):
     stock : dataframe
         updated dataframe with new Alpha column
     """
-    path = os.path.join(os.getcwd(), "Data")
+    # path = os.path.join(os.getcwd(), "Data")
 
     stock["% YTD of Company"] = (
         (stock.tail(1)['Close Price'].values[0]/stock["Close Price"])-1)*100
-    ind = pd.read_csv(os.path.join(path, "Index.csv"))
+    # ind = pd.read_csv(os.path.join(path, "Index.csv"))
     ind["Date"] = pd.to_datetime(ind["Date"])
     s = stock.Date.head(1).values[0]
     e = stock.Date.tail(1).values[0]

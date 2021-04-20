@@ -204,3 +204,7 @@ def download_index():
         return res
     except:
         traceback.print_exc()
+
+
+if __name__ == "__main__":
+    download_index()
