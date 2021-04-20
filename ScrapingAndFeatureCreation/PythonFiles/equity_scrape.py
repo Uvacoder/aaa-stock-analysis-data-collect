@@ -64,3 +64,7 @@ def download_equity():
         "/html/body/div[1]/form/div[4]/div/div/div[2]/div/div/div[2]/a/i").click()
     time.sleep(3)
     driver.quit()
+
+
+if __name__ == "__main__":
+    download_equity()

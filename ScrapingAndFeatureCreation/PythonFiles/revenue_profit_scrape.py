@@ -1,3 +1,4 @@
+import sys
 import os
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
@@ -99,3 +100,15 @@ def download_revenue_profit(code, name):
         code_df.to_csv(os.path.join(path, str(code)+".csv"), index=None)
     driver = create_driver()
     download()
+
+
+if __name__ == "__main__":
+    if len(sys.argv) == 3:
+        try:
+            code = int(sys.argv[1])
+            name = sys.argv[2]
+            download_revenue_profit(code, name)
+        except:
+            print("Invalid Security Code and Security Name")
+    else:
+        print("Invalid Security Code and Security Name")

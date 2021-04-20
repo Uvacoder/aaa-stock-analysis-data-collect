@@ -1,3 +1,4 @@
+import sys
 import os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -88,11 +89,11 @@ def download_stocks(security_id):
         d : string
             day
 
-        m : string 
+        m : string
             month
 
         y : string
-            year 
+            year
 
         """
         from_date = driver.find_element_by_xpath(
@@ -128,11 +129,11 @@ def download_stocks(security_id):
         d : string
             day
 
-        m : string 
+        m : string
             month
 
         y : string
-            year 
+            year
 
         """
         to_date = driver.find_element_by_xpath(
@@ -250,3 +251,14 @@ def download_stocks(security_id):
         stock = convert_date_to_unix_timestamp(stock)
         stock.to_csv(os.path.join(path, str(security_id)+".csv"), index=None)
         return stock
+
+
+if __name__ == "__main__":
+    if len(sys.argv) == 3:
+        try:
+            security_code = int(sys.argv[1])
+            download_stocks(security_id)
+        except:
+            print("Invalid Security Code")
+    else:
+        print("Invalid Security Code")

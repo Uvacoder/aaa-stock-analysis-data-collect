@@ -7,6 +7,8 @@ import time
 import datetime
 from bs4 import BeautifulSoup
 
+import sys
+
 
 def download_risk_free_rate():
     """
@@ -80,3 +82,7 @@ def download_risk_free_rate():
     driver = create_driver()
     driver.get(risk_free_rate_url)
     download()
+
+
+if __name__ == "__main__":
+    download_risk_free_rate()

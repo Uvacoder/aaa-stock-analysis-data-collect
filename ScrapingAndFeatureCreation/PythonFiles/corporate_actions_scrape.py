@@ -1,3 +1,4 @@
+import sys
 import os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -189,3 +190,14 @@ def download_corporate_actions(security_id):
             path, str(security_id)+".csv"))
     os.rename(os.path.join(path, "Corporate_Actions.csv"),
               os.path.join(path, str(security_id)+".csv"))
+
+
+if __name__ == "__main__":
+    if len(sys.argv) == 2:
+        try:
+            security_id = int(sys.argv[1])
+            download_corporate_actions(str(security_id))
+        except:
+            print("Invalid Security Code")
+    else:
+        print("Invalid Security Code")
