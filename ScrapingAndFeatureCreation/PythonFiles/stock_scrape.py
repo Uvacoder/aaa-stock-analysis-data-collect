@@ -257,7 +257,7 @@ if __name__ == "__main__":
     if len(sys.argv) == 3:
         try:
             security_code = int(sys.argv[1])
-            download_stocks(security_id)
+            download_stocks(security_code)
         except:
             print("Invalid Security Code")
     else:
