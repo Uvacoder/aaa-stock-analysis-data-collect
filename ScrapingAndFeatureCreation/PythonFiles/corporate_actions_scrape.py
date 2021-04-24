@@ -170,7 +170,7 @@ def download_corporate_actions(security_id):
             chrome web driver.
         """
         chromeOptions = webdriver.ChromeOptions()
-        # chromeOptions.add_argument("--headless")
+        chromeOptions.add_argument("--headless")
         chromeOptions.add_experimental_option(
             "prefs", {"download.default_directory": path})
         driver = webdriver.Chrome(
