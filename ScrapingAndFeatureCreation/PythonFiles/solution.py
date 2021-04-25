@@ -55,8 +55,6 @@ if __name__ == "__main__":
             stock_df = feature_creation.create_eps_pe_ratio_revenue_income_expenditure_net_profit(
                 revenue_df, stock_df)
             stock_df = feature_creation.add_next_day_columns(stock_df)
-            stock_df.to_csv(os.path.join(path, "Stock/"+"fc" +
-                            str(security_code)+".csv"), index=None)
 
             # stock_df[feature_creation.direct_columns] = stock_df[feature_creation.direct_columns].apply(
             #     pd.to_numeric, errors="coerce")
