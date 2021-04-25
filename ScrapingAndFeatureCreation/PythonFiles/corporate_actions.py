@@ -115,15 +115,19 @@ def create_dividend(stock, corporate):
     dividend = corporate[corporate['Purpose'].str.contains("Dividend")]
     result = {}
     for index, row in dividend.iterrows():
-        year = row["Ex Date"].year
-        month = row["Ex Date"].month
-        amount = re.findall(r"\d+.?\d*", row["Purpose"])[0]
-        res = result.get(year, {})
-        q = "1q" if 1 <= month <= 3 else "2q" if 4 <= month <= 6 else "3q" if 6 <= month <= 9 else "4q"
-        val = res.get(q, [])
-        val.append(float(amount))
-        res[q] = val
-        result[year] = res
+        try:
+            year = row["Ex Date"].year
+            month = row["Ex Date"].month
+            amount = re.findall(r"\d+.?\d*", row["Purpose"])[0]
+            res = result.get(year, {})
+            q = "1q" if 1 <= month <= 3 else "2q" if 4 <= month <= 6 else "3q" if 6 <= month <= 9 else "4q"
+            val = res.get(q, [])
+            val.append(float(amount))
+            res[q] = val
+            result[year] = res
+        except:
+            pass
+
     for year, quaters in result.items():
         for q, a in quaters.items():
             quaters[q] = sum(a)/len(a)
