@@ -790,8 +790,8 @@ def close_price_as_percent_of_LV_HV_BA(stock):
 def create_new_LB_UB(stock):
     """
     Creates new growth rate columns in the stock dataframe.
-    For Lower Band, Upper Lower 
-    for 30,90,180,360,720,1440 bands
+    Previous and Next ,Lower Band, Upper Band for 
+    for 30,90,180,360,720,1080 days
 
     Lower Lower = Close Price of that day/min close price in the band
     Upper Band = Close Price of that day/max close price in the band
@@ -808,15 +808,30 @@ def create_new_LB_UB(stock):
         updated dataframe with newly created columns.
     """
 
-    bands = [30, 90, 180, 360, 720, 1440]
+    bands = [30, 60, 90, 180, 360, 720, 1080]
     for b in bands:
-        bcols = ["LB "+str(b) + " days", "UB "+str(b)+" days"]
-        stock[bcols] = pd.DataFrame([[0]*len(bcols)], index=stock.index)
-        for i in range(stock.shape[0]):
-            s = i+1
-            specific_bands = stock.iloc[-(s):-(s+b+1):-1]
-            low = specific_bands["Close Price"].min()
-            high = specific_bands["Close Price"].max()
-#             today = stock.iloc[-(s)]["Close Price"]
-            stock.loc[specific_bands.index, bcols] = [low, high]
+        pcols = ["Previous " + str(b) + " days LB",
+                 "Previous " + str(b) + " days UB"]
+        stock[pcols] = pd.DataFrame([[0]*len(pcols)], index=stock.index)
+        for index, row in stock.iterrows():
+            start = row['Date'] - datetime.timedelta(days=1)
+            end = start - datetime.timedelta(days=b)
+            specific_dates = stock[stock.Date.between(end, start)]
+            low = specific_dates["Close Price"].min()
+            high = specific_dates["Close Price"].max()
+            today = row["Close Price"]
+            stock.loc[index, pcols] = [low/today, high/today]
+
+    bands = [30, 60, 90, 180, 360, 720, 1080]
+    for b in bands:
+        ncols = ["Next " + str(b) + " days LB", "Next " + str(b) + " days UB"]
+        stock[ncols] = pd.DataFrame([[0]*len(ncols)], index=stock.index)
+        for index, row in stock.iterrows():
+            start = row['Date'] + datetime.timedelta(days=1)
+            end = start + datetime.timedelta(days=b)
+            specific_dates = stock[stock.Date.between(start, end)]
+            low = specific_dates["Close Price"].min()
+            high = specific_dates["Close Price"].max()
+            today = row["Close Price"]
+            stock.loc[index, ncols] = [low/today, high/today]
     return stock

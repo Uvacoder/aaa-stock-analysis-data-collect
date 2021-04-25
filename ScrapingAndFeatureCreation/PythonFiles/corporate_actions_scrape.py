@@ -7,6 +7,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import time
 import calendar
 import datetime
+import pandas as pd
 
 
 def download_corporate_actions(security_id):
@@ -176,20 +177,26 @@ def download_corporate_actions(security_id):
         driver = webdriver.Chrome(
             ChromeDriverManager().install(), options=chromeOptions)
         return driver
-
-    driver = create_driver()
-    driver.get(corporate_url)
-    set_security_id(str(security_id))
-    # set_from_date("01", "Jan", "1991")
-    set_from_date("02", "Aug", "2007")
-    today = datetime.date.today()
-    set_to_date(today.day, calendar.month_abbr[today.month], str(today.year))
-    download()
-    if os.path.exists(os.path.join(path, str(security_id)+".csv")):
-        os.remove(os.path.join(
-            path, str(security_id)+".csv"))
-    os.rename(os.path.join(path, "Corporate_Actions.csv"),
-              os.path.join(path, str(security_id)+".csv"))
+    try:
+        driver = create_driver()
+        driver.get(corporate_url)
+        set_security_id(str(security_id))
+        # set_from_date("01", "Jan", "1991")
+        set_from_date("02", "Aug", "2007")
+        today = datetime.date.today()
+        set_to_date(
+            today.day, calendar.month_abbr[today.month], str(today.year))
+        download()
+        if os.path.exists(os.path.join(path, str(security_id)+".csv")):
+            os.remove(os.path.join(
+                path, str(security_id)+".csv"))
+        os.rename(os.path.join(path, "Corporate_Actions.csv"),
+                  os.path.join(path, str(security_id)+".csv"))
+    except:
+        cols = ['Security Code', 'Security Name', 'Company Name', 'Ex Date', 'Purpose', 'Record Date',
+                'BC Start Date', 'BC End Date', 'ND Start Date', 'ND End Date', 'Actual Payment Date']
+        df = pd.DataFrame(columns=cols)
+        df.to_csv(os.path.join(path, str(security_id)+".csv"), index=None)
 
 
 if __name__ == "__main__":
