@@ -1,10 +1,10 @@
 import AppBar from "@material-ui/core/AppBar";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
 import { withStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import React from "react";
-import { Route, Switch, withRouter } from "react-router-dom";
+
+import { Route, Switch, withRouter, useHistory } from "react-router-dom";
 import About from "./About";
 import CompanyDetails from "./CompanyDetails";
 import Comparision from "./Comparision";
@@ -16,10 +16,9 @@ import Revenue from "./Revenue";
 import Sectors from "./Sectors";
 import SideBar from "./SideBar";
 import SP500 from "./SP500";
-import { Divider } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import Top from "./Top";
-const drawerWidth = 250;
-
+const drawerWidth = 300;
 const styles = (theme) => ({
   root: {
     display: "flex",
@@ -39,7 +38,9 @@ const styles = (theme) => ({
   toolbar: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "flex-end",
+    // justifyContent: "flex-end",
+    justifyContent: "center",
+    padding: 20,
     ...theme.mixins.toolbar,
   },
   content: {
@@ -53,7 +54,6 @@ const styles = (theme) => ({
     overflowX: "hidden",
   },
 });
-
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -70,18 +70,16 @@ class Home extends React.Component {
     const { classes } = this.props;
     return (
       <React.Fragment>
+        <AppBar
+          position="relative"
+          className={classes.appBar}
+          style={{ backgroundColor: "inherit" }}
+        >
+          <Toolbar>
+            <NavigationBar />
+          </Toolbar>
+        </AppBar>
         <div className={classes.root}>
-          <CssBaseline />
-          <AppBar
-            position="fixed"
-            className={classes.appBar}
-            style={{ backgroundColor: "inherit" }}
-          >
-            <Toolbar>
-              <NavigationBar />
-            </Toolbar>
-            <Divider />
-          </AppBar>
           <Drawer
             className={classes.drawer}
             variant="permanent"
@@ -90,14 +88,12 @@ class Home extends React.Component {
             }}
             anchor="left"
           >
-            <div className={classes.toolbar} />
+            <div className={classes.toolbar}>
+              <Typography variant="h4">Stock Trends</Typography>
+            </div>
             <SideBar />
           </Drawer>
           <main className={classes.content}>
-            <div className={classes.toolbar} />
-            <Divider />
-            <Divider />
-            <Divider />
             <Switch>
               <Route exact path="/" />
               <Route exact path="/login" component={Login} />

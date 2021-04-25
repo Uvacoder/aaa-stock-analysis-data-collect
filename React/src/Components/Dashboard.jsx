@@ -11,6 +11,7 @@ class Dashboard extends React.Component {
       details: [],
       selectedPeriod: "",
       company: "",
+      error: false,
       series: [],
       options: {
         chart: {
@@ -123,17 +124,28 @@ class Dashboard extends React.Component {
         axios
           .get("/stockdetails?company=" + this.state.company)
           .then((s) => {
-            this.setState({ details: s.data, loading: false }, () => {});
+            if (s.status === 200) {
+              this.setState({ details: s.data, loading: false }, () => {});
+            } else {
+              this.setState({ details: [], loading: false }, () => {});
+            }
           })
           .then(() => {})
-          .catch((e) => {});
+          .catch((e) => {
+            console.log(e);
+            this.setState({ loading: false, error: true }, () => {});
+          });
       });
     } else {
       this.setState({ company: this.props.company }, () => {
         axios
           .get("/sp500")
           .then((s) => {
-            this.setState({ details: s.data, loading: false }, () => {});
+            if (s.status === 200) {
+              this.setState({ details: s.data, loading: false }, () => {});
+            } else {
+              this.setState({ details: [], loading: false }, () => {});
+            }
           })
           .then(() => {})
           .catch((e) => {});
@@ -146,8 +158,12 @@ class Dashboard extends React.Component {
       name: "Close Price",
       data: [],
     };
-
-    days = days === "all" ? this.state.details.length - 1 : days;
+    days =
+      days === "all"
+        ? this.state.details.length - 1
+        : days > this.state.details.length - 1
+        ? this.state.details.length - 1
+        : days;
     const toDate = this.state.details[0]["Date"];
     const fromDate = this.state.details[days]["Date"];
     const data = this.state.details.slice(0, days);
@@ -188,42 +204,44 @@ class Dashboard extends React.Component {
         {this.state.loading ? (
           <Loader />
         ) : (
-          <div>
-            <Divider />
-            <Divider />
-            <Divider />
-            <ButtonGroup
-              color="primary"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                margin: "10px",
-              }}
-            >
-              <Button value="7" onClick={this.selectedPeriod}>
-                7D
-              </Button>
-              <Button value="30" onClick={this.selectedPeriod}>
-                1M
-              </Button>
-              <Button value="90" onClick={this.selectedPeriod}>
-                3M
-              </Button>
-              <Button value="180" onClick={this.selectedPeriod}>
-                6M
-              </Button>
-              <Button value="360" onClick={this.selectedPeriod}>
-                1Y
-              </Button>
-              <Button value="1800" onClick={this.selectedPeriod}>
-                5Y
-              </Button>
-              <Button value="all" onClick={this.selectedPeriod}>
-                All
-              </Button>
-            </ButtonGroup>
-            <Chart options={this.state.options} series={this.state.series} />
-          </div>
+          this.state.error !== true && (
+            <div>
+              <Divider />
+              <Divider />
+              <Divider />
+              <ButtonGroup
+                color="primary"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  margin: "10px",
+                }}
+              >
+                <Button value="7" onClick={this.selectedPeriod}>
+                  7D
+                </Button>
+                <Button value="30" onClick={this.selectedPeriod}>
+                  1M
+                </Button>
+                <Button value="90" onClick={this.selectedPeriod}>
+                  3M
+                </Button>
+                <Button value="180" onClick={this.selectedPeriod}>
+                  6M
+                </Button>
+                <Button value="360" onClick={this.selectedPeriod}>
+                  1Y
+                </Button>
+                <Button value="1800" onClick={this.selectedPeriod}>
+                  5Y
+                </Button>
+                <Button value="all" onClick={this.selectedPeriod}>
+                  All
+                </Button>
+              </ButtonGroup>
+              <Chart options={this.state.options} series={this.state.series} />
+            </div>
+          )
         )}
       </React.Fragment>
     );

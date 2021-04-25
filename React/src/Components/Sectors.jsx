@@ -16,8 +16,17 @@ class Sectors extends React.Component {
 
   componentDidMount = () => {
     console.log("Sectors");
+    const { history, location } = this.props;
+    if ("state" in location && location.state === undefined) {
+      history.push("/");
+    }
+
     axios.get("/sectors").then((s) => {
-      this.setState({ sectors: s.data }, () => {});
+      if (s.status === 200) {
+        this.setState({ sectors: s.data }, () => {});
+      } else {
+        this.setState({ sectors: [] }, () => {});
+      }
     });
   };
 

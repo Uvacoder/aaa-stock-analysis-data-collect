@@ -18,7 +18,7 @@ const styles = (theme) => ({
     textDecoration: "none",
   },
   grid: {
-    paddingTop: 22,
+    padding: 20,
   },
 });
 
@@ -44,7 +44,11 @@ class NavigationBar extends React.Component {
     axios
       .get("/companyNames")
       .then((s) => {
-        this.setState({ companyNames: s.data });
+        if (s.status === 200) {
+          this.setState({ companyNames: s.data });
+        } else {
+          this.setState({ companyNames: [] });
+        }
       })
       .catch((e) => console.log(e));
   };
@@ -53,15 +57,6 @@ class NavigationBar extends React.Component {
     const { classes } = this.props;
     return (
       <Grid container className={classes.root} spacing={2}>
-        <Grid item>
-          <Typography
-            className={classes.grid}
-            variant="h4"
-            style={{ color: "#000000" }}
-          >
-            Stock Trends
-          </Typography>
-        </Grid>
         <Grid item>
           <NavLink to="/" className={classes.link}>
             <Typography className={classes.grid} variant="h4">

@@ -18,28 +18,36 @@ class Top extends React.Component {
 
   componentDidMount = () => {
     console.log("Top");
+    const { history, location } = this.props;
+    if ("state" in location && location.state === undefined) {
+      history.push("/");
+    }
     const { match } = this.props;
     const { num, type } = match.params;
     this.setState({ num: num, type: type, loading: true }, () => {});
 
     axios.get("/previousdaystockdetails").then((s) => {
-      let companyStockDetails = s.data;
-      if (type === "sell") {
-        companyStockDetails.sort((a, b) => {
-          return a["Close Price"] - b["Close Price"];
-        });
-      } else if (type === "buy") {
-        companyStockDetails.sort((a, b) => {
-          return b["Close Price"] - a["Close Price"];
-        });
+      if (s.status === 200) {
+        let companyStockDetails = s.data;
+        if (type === "sell") {
+          companyStockDetails.sort((a, b) => {
+            return a["Close Price"] - b["Close Price"];
+          });
+        } else if (type === "buy") {
+          companyStockDetails.sort((a, b) => {
+            return b["Close Price"] - a["Close Price"];
+          });
+        }
+        companyStockDetails = companyStockDetails.slice(0, num);
+        let topCompanies = [];
+        for (let index = 0; index < companyStockDetails.length; index++) {
+          const element = companyStockDetails[index];
+          topCompanies.push(element["company"]);
+        }
+        this.setState({ topCompanies: topCompanies, loading: false }, () => {});
+      } else {
+        this.setState({ topCompanies: [], loading: false }, () => {});
       }
-      companyStockDetails = companyStockDetails.slice(0, num);
-      let topCompanies = [];
-      for (let index = 0; index < companyStockDetails.length; index++) {
-        const element = companyStockDetails[index];
-        topCompanies.push(element["company"]);
-      }
-      this.setState({ topCompanies: topCompanies, loading: false }, () => {});
     });
   };
 

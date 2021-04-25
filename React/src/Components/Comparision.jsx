@@ -1,38 +1,47 @@
 import React from "react";
 import axios from "axios";
 import underscore from "underscore";
+import Autocomplete from "@material-ui/lab/Autocomplete";
+
 import {
   FormControl,
   Grid,
   InputLabel,
-  ListItem,
+  Button,
   MenuItem,
+  Paper,
   Select,
   Typography,
-  withStyles,
+  TextField,
+  Chip,
+  Divider,
 } from "@material-ui/core";
-import NumberFormat from "react-number-format";
 import Loader from "react-loader-spinner";
 import { NavLink } from "react-router-dom";
-const styles = (theme) => ({
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 150,
-  },
-  selectEmpty: {
-    marginTop: theme.spacing(2),
-  },
-});
-
+import Dashboard from "./Dashboard";
 class Comparision extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       loading: false,
       companyNames: [],
-      selectedCompany: "",
-      selectedTimePeriod: "",
-      rate: "",
+      selectedCompanies: [],
+      selectedTimePeriod: "180",
+      rate: "1",
+      stockkeys: [
+        "Date",
+        "Open Price",
+        "High Price",
+        "Low Price",
+        "Close Price",
+        "WAP",
+        "No.of Shares",
+        "No. of Trades",
+        "Total Turnover (Rs.)",
+        "% Deli. Qty to Traded Qty",
+        "Spread High-Low",
+        "Spread Close-Open",
+      ],
       timePeriod: {
         "1 day": "1",
         "7 days": "7",
@@ -44,51 +53,123 @@ class Comparision extends React.Component {
         "5 years": "1800",
         "10 years": "3600",
       },
-      response: [],
+      stockdetails: [],
+      num: 10,
+      error: "",
     };
   }
 
   componentDidMount = () => {
+    console.log("Comparision");
     axios
       .get("/companynames")
       .then((s) => {
-        this.setState({ companyNames: s.data }, () => {});
+        if (s.status === 200) {
+          this.setState({ companyNames: s.data }, () => {});
+        } else {
+          this.setState({ companyNames: s.data }, () => {});
+        }
       })
       .catch((e) => console.log(e));
   };
 
-  getTopCompanies = () => {
-    const days =
-      this.state.selectedTimePeriod === ""
-        ? 180
-        : this.state.selectedTimePeriod;
-    this.setState({ loading: true, selectedTimePeriod: days }, () => {
-      axios
-        .get("/topCompanies?days=" + days + "&rate=" + this.state.rate / 100)
+  onClickSubmit = async () => {
+    if (this.state.selectedCompanies.length < 2) {
+      this.setState({ error: "select atleast two companies" }, () => {});
+      return;
+    } else {
+      this.setState({ error: "", loading: true }, () => {});
+    }
+    let stockdetails = {};
+    for (let index = 0; index < this.state.selectedCompanies.length; index++) {
+      const company = this.state.selectedCompanies[index];
+      stockdetails[company] = {};
+    }
+    for (let index = 0; index < this.state.selectedCompanies.length; index++) {
+      const company = this.state.selectedCompanies[index];
+      await axios
+        .get("/previousdaystockdetails?company=" + company)
         .then((s) => {
-          this.setState({ response: s.data }, () => {});
-          this.setState({ loading: false }, () => {
-            console.log(this.state);
-          });
+          if (s.status === 200) {
+            stockdetails[company] = Object.assign(
+              stockdetails[company],
+              s.data
+            );
+          }
         })
         .catch((e) => {
           console.log(e);
         });
-    });
+      await axios
+        .get(
+          "/topCompanies?days=" +
+            this.state.selectedTimePeriod +
+            "&rate=" +
+            this.state.rate / 100 +
+            "&company=" +
+            company
+        )
+        .then((s) => {
+          if (s.status === 200) {
+            stockdetails[company] = Object.assign(
+              stockdetails[company],
+              s.data
+            );
+          }
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    }
+    this.setState({ stockdetails: stockdetails, loading: false }, () => {});
   };
 
   render() {
-    const { classes } = this.props;
     const period = underscore.invert(this.state.timePeriod);
     return (
       <React.Fragment>
-        <Grid container>
-          <Grid item xs={3}>
-            <FormControl variant="outlined" className={classes.formControl}>
-              <InputLabel id="demo-simple-select-filled-label">
-                trading period
-              </InputLabel>
+        <Grid
+          container
+          spacing={2}
+          direction="row"
+          justify="flex-start"
+          alignItems="center"
+        >
+          <Grid item xs={4}>
+            <Autocomplete
+              multiple
+              value={this.state.firstCompany}
+              onChange={(e, company, reason, detail) => {
+                if (reason === "remove-option") {
+                  let companies = this.state.stockdetails;
+                  delete companies[detail.option];
+                  this.setState({ stockdetails: companies }, () => {});
+                } else {
+                  this.setState({ selectedCompanies: company }, () => {});
+                }
+              }}
+              id="select multiple companies"
+              freeSolo
+              options={this.state.companyNames.map(
+                (companyname) => companyname
+              )}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  label="select multiple companies"
+                  margin="normal"
+                  variant="outlined"
+                  helperText={this.state.error}
+                  error={this.state.error !== ""}
+                />
+              )}
+            />
+          </Grid>
+          <Grid item>
+            <FormControl style={{ minWidth: "150px" }} variant="outlined">
+              <InputLabel>trading period</InputLabel>
               <Select
+                style={{ width: "100%" }}
                 labelId="trading period"
                 id="trading"
                 onChange={(e) => {
@@ -109,61 +190,90 @@ class Comparision extends React.Component {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={3}>
-            <NumberFormat
-              style={{ width: "75%", height: "75%", marginTop: "10px" }}
+          <Grid item xs={2}>
+            <TextField
+              type="number"
+              style={{ width: "100%" }}
+              inputProps={{ min: "-100", max: "100", step: "0.01" }}
+              label="rate of growth"
+              variant="outlined"
               value={this.state.rate}
-              id="rate"
-              placeholder="x % rate increase close price gr"
               onChange={(e) => {
-                let val = e.target.value;
-                if (val === "" || val > 100 || val < -100) {
-                  this.setState({ rate: "" }, () => {});
-                }
-              }}
-              onKeyPress={(e) => {
-                let val = e.target.value;
-                if (
-                  e.key === "Enter" &&
-                  val !== "" &&
-                  val <= 100 &&
-                  val >= -100
-                ) {
-                  this.setState({ rate: val }, () => {
-                    this.getTopCompanies();
-                  });
-                }
+                this.setState({ rate: e.target.value });
               }}
             />
           </Grid>
+          <Grid item>
+            <Button
+              variant="outlined"
+              size="large"
+              onClick={this.onClickSubmit}
+            >
+              Submit
+            </Button>
+          </Grid>
         </Grid>
-
+        <Divider />
+        <Divider />
         {this.state.loading ? (
           <Loader />
         ) : (
-          this.state.selectedTimePeriod !== "" &&
-          this.state.response.length !== 0 &&
-          this.state.response.map((company) => {
-            const link = "companydetails/" + company["company"];
-            const text =
-              " In the last " +
-              period[company["totalNumberOfDays"]] +
-              " for " +
-              company["percentOfDays"] +
-              " percent of trading days, growth rate for " +
-              company["company"] +
-              " was more than " +
-              company["rate"];
-            return (
-              <ListItem button component={NavLink} to={link}>
-                <Typography>{text}</Typography>
-              </ListItem>
-            );
-          })
+          this.state.stockdetails.length !== 0 && (
+            <Grid
+              container
+              spacing={1}
+              direction="row"
+              justify="flex-start"
+              alignItems="center"
+            >
+              {Object.keys(this.state.stockdetails).map((company) => {
+                const element = this.state.stockdetails[company];
+                return (
+                  <Grid item xs={6}>
+                    <Paper
+                      style={{
+                        display: "flex",
+                        padding: "15px",
+                        margin: "15px",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <NavLink
+                        to={{
+                          pathname: "companydetails/" + element["company"],
+                        }}
+                      >
+                        <Typography variant="h6">
+                          {element["company"]}
+                        </Typography>
+                      </NavLink>
+                    </Paper>
+                    <Typography variant="h6">
+                      In the last {period[element["totalNumberOfDays"]]}, for{" "}
+                      {element["percentOfDays"]} percent of trading days close
+                      price growth rate was more than {element["rate"]} %
+                    </Typography>
+                    <Dashboard company={element["company"]} />
+                    {this.state.stockkeys.map((key, i) => {
+                      let res = key + " : " + element[key];
+                      return (
+                        <Chip
+                          color="primary"
+                          variant="outlined"
+                          label={res}
+                          style={{ margin: "5px" }}
+                        />
+                      );
+                    })}
+                  </Grid>
+                );
+              })}
+            </Grid>
+          )
         )}
       </React.Fragment>
     );
   }
 }
 
-export default withStyles(styles)(Comparision);
+export default Comparision;
