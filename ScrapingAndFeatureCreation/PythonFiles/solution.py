@@ -40,7 +40,7 @@ if __name__ == "__main__":
                 path, "Stock/"+str(security_code)+".csv"))
             riskfreerates = pd.read_csv(path+"/RiskFreeRate.csv")
 
-            stock_df = data_cleaning.cleaning(stock_df, index_df)
+            stock_df, index_df = data_cleaning.cleaning(stock_df, index_df)
             stock_df = corporate_actions.apply_corporate_actions(
                 stock_df, corporate_df)
             stock_df = feature_creation.calculate_beta(stock_df, index_df)

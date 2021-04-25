@@ -197,8 +197,10 @@ def download_index():
         res[["Open", "High", "Low", "Close"]] = res[[
             "Open", "High", "Low", "Close"]].apply(pd.to_numeric)
         res["Date"] = pd.to_datetime(res["Date"])
+        res = res.sort_values(by=["Date"], ascending=[True])
+        res = res.drop_duplicates(subset=["Date"], keep="first")
         res["% Return"] = ((res["Close"] / res['Close'].shift(1))-1)*100
-        res["% YTD"] = ((res.tail(1)['Close'].values[0]/res["Close"])-1)*100
+        res["% YTD"] = ((res.head(1)['Close'].values[0]/res["Close"])-1)*100
         os.remove(os.path.join(path, "CSVForDate.csv"))
         res.to_csv(os.path.join(path, "Index.csv"), index=None)
         return res

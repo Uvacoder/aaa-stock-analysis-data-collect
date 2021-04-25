@@ -798,7 +798,7 @@ def create_new_LB_UB(stock):
 
     Parameters
     ----------
-    
+
     stock : dataframe
 
     Returns
@@ -808,9 +808,9 @@ def create_new_LB_UB(stock):
         updated dataframe with newly created columns.
     """
 
-    bands = [30,90,180,360,720,1440]
+    bands = [30, 90, 180, 360, 720, 1440]
     for b in bands:
-        bcols = ["LB "+str(b) + " days","UB "+str(b)+" days"]
+        bcols = ["LB "+str(b) + " days", "UB "+str(b)+" days"]
         stock[bcols] = pd.DataFrame([[0]*len(bcols)], index=stock.index)
         for i in range(stock.shape[0]):
             s = i+1
@@ -818,5 +818,5 @@ def create_new_LB_UB(stock):
             low = specific_bands["Close Price"].min()
             high = specific_bands["Close Price"].max()
 #             today = stock.iloc[-(s)]["Close Price"]
-            stock.loc[specific_bands.index,bcols] = [low,high]
+            stock.loc[specific_bands.index, bcols] = [low, high]
     return stock

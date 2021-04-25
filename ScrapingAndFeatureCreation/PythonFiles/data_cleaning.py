@@ -115,4 +115,4 @@ def cleaning(df, ind):
     df.reset_index(drop=True, inplace=True)
     df = drop_duplicate_rows(df)
     df = df.sort_values(by=["Date"], ascending=[False])
-    return df
+    return df, ind
