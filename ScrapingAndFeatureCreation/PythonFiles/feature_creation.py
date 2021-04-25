@@ -4,6 +4,7 @@ import os
 import re
 import math
 import traceback
+import datetime
 
 
 def calculate_beta(stock, ind):
