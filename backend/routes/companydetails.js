@@ -3,9 +3,9 @@ var router = express.Router();
 const fs = require("fs");
 const csv = require("fast-csv");
 const process = require("process");
+var path = require("path");
 
 router.get("/", function (req, res, next) {
-  process.chdir("../");
   console.log(req.url);
   const company = req.query["company"];
   try {

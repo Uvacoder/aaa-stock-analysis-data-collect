@@ -6,7 +6,6 @@ const underscore = require("underscore");
 const process = require("process");
 
 router.get("/", async function (req, res, next) {
-  process.chdir("../");
   let company = req.query["company"];
   company = company.toUpperCase();
 

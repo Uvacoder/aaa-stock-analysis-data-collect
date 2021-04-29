@@ -6,7 +6,6 @@ const process = require("process");
 const underscore = require("underscore");
 
 router.get("/", async function (req, res, next) {
-  process.chdir("../");
   console.log(req.url);
   const query = req.query;
   const days = parseInt(query["days"]);

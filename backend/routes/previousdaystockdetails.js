@@ -7,8 +7,6 @@ const underscore = require("underscore");
 
 router.get("/", async function (req, res, next) {
   console.log(req.url);
-  process.chdir("../");
-
   let company = req.query["company"];
   if (company === undefined) {
     try {

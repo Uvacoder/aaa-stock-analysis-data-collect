@@ -6,7 +6,6 @@ var path = require("path");
 const process = require("process");
 
 router.get("/", function (req, res, next) {
-  process.chdir("../");
   console.log(process.cwd());
   try {
     const companywithid = JSON.parse(
