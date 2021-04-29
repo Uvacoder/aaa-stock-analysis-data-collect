@@ -1008,7 +1008,7 @@ def perform_operation(security_code):
             except Exception as e:
                 traceback.print_exc()
         stock_df = close_price_as_percent_of_LV_HV_BA(stock_df)
-        stock_df.to_csv(os.path.join(outputpath,"Stock/"+"gr"+str(security_code)+".csv"),index=None)
+        stock_df.to_csv(os.path.join(path,"GRStock/"+"gr"+str(security_code)+".csv"),index=None)
     except :
         traceback.print_exc()
         
