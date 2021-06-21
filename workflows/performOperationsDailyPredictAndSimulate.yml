@@ -1,0 +1,199 @@
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Perform Operations Daily - Predict and Create Simulation Files
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 18 * * *"
+jobs:
+  predictandsimulate30:
+    name: predictandsimulate30
+    runs-on: ubuntu-latest
+    steps:
+      - name: Removing Unnecessary Files
+        run: |
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /usr/share/dotnet
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: predictandsimulate30
+        run: |
+          python predict30.py
+          python newsimulation30.py
+      - name: Setup Github Config
+        run: |
+          git config --global user.name "saikr789"
+          git config --global user.email "saikrishna.nama@msitprogram.net"
+      - name: Commiting New Files
+        run: |
+          git pull origin master
+          git add *
+          git commit -m "`date +'%d-%m-%Y'`"
+          git push origin master
+
+  predictandsimulate60:
+    name: predictandsimulate60
+    runs-on: ubuntu-latest
+    steps:
+      - name: Removing Unnecessary Files
+        run: |
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /usr/share/dotnet
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: predictandsimulate60
+        run: |
+          python predict60.py
+          python newsimulation60.py
+      - name: Setup Github Config
+        run: |
+          git config --global user.name "saikr789"
+          git config --global user.email "saikrishna.nama@msitprogram.net"
+      - name: Commiting New Files
+        run: |
+          git pull origin master
+          git add *
+          git commit -m "`date +'%d-%m-%Y'`"
+          git push origin master
+
+  predictandsimulate90:
+    name: predictandsimulate90
+    runs-on: ubuntu-latest
+    steps:
+      - name: Removing Unnecessary Files
+        run: |
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /usr/share/dotnet
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: predictandsimulate90
+        run: |
+          python predict90.py
+          python newsimulation90.py
+      - name: Setup Github Config
+        run: |
+          git config --global user.name "saikr789"
+          git config --global user.email "saikrishna.nama@msitprogram.net"
+      - name: Commiting New Files
+        run: |
+          git pull origin master
+          git add *
+          git commit -m "`date +'%d-%m-%Y'`"
+          git push origin master
+
+  predictandsimulate180:
+    name: predictandsimulate180
+    runs-on: ubuntu-latest
+    steps:
+      - name: Removing Unnecessary Files
+        run: |
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /usr/share/dotnet
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: predictandsimulate180
+        run: |
+          python predict180.py
+          python newsimulation180.py
+      - name: Setup Github Config
+        run: |
+          git config --global user.name "saikr789"
+          git config --global user.email "saikrishna.nama@msitprogram.net"
+      - name: Commiting New Files
+        run: |
+          git pull origin master
+          git add *
+          git commit -m "`date +'%d-%m-%Y'`"
+          git push origin master
+
+  predictandsimulate360:
+    name: predictandsimulate360
+    runs-on: ubuntu-latest
+    steps:
+      - name: Removing Unnecessary Files
+        run: |
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /usr/share/dotnet
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: predictandsimulate360
+        run: |
+          python predict360.py
+          python newsimulation360.py
+      - name: Setup Github Config
+        run: |
+          git config --global user.name "saikr789"
+          git config --global user.email "saikrishna.nama@msitprogram.net"
+      - name: Commiting New Files
+        run: |
+          git pull origin master
+          git add *
+          git commit -m "`date +'%d-%m-%Y'`"
+          git push origin master
+
+  predictandsimulate720:
+    name: predictandsimulate720
+    runs-on: ubuntu-latest
+    steps:
+      - name: Removing Unnecessary Files
+        run: |
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /usr/share/dotnet
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: predictandsimulate720
+        run: |
+          python predict720.py
+          python newsimulation720.py
+      - name: Setup Github Config
+        run: |
+          git config --global user.name "saikr789"
+          git config --global user.email "saikrishna.nama@msitprogram.net"
+      - name: Commiting New Files
+        run: |
+          git pull origin master
+          git add *
+          git commit -m "`date +'%d-%m-%Y'`"
+          git push origin master
